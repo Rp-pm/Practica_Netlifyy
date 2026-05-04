@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Proiect de practică - Inițiere în specialitate la Colegiul UTM">
+    <meta name="author" content="Numele Studentului">
+    <title>Acasă | [Numele Proiectului Tău]</title>
+    
+    <!-- Conectare CSS viitor -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- Antetul paginii -->
+    <header>
+        <nav>
+            <!-- Aici va veni meniul de navigare în Ziua 2 -->
+            <strong>[Logo Proiect]</strong>
+        </nav>
+    </header>
+
+    <!-- Conținutul principal -->
+    <main>
+        <section id="hero">
+            <h1>Bun venit la proiectul meu: [Tema Aleasă]</h1>
+            <p>Această pagină este în curs de dezvoltare în cadrul stagiului de practică.</p>
+        </section>
+    </main>
+
+    <!-- Subsolul paginii -->
+    <footer>
+        <p>&copy; 2026 - Colegiul UTM. Realizat de [Numele Studentului].</p>
+    </footer>
+
+</body>
+</html>
