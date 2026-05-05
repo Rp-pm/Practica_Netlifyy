@@ -3,34 +3,208 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Proiect de practică - Inițiere în specialitate la Colegiul UTM">
-    <meta name="author" content="Sergiu Stodolnean">
-    <title>Acasă | [Numele Proiectului Tău]</title>
+    <meta name="description" content="Proiect de practică - Colegiul UTM">
+    <meta name="author" content="Stodolnean Sergiu">
+    <title>AgencyRecruit | Recrutare și Plasare</title>
     
-    <!-- Conectare CSS viitor -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        /* Resetare de bază */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Header & Navigație */
+        header {
+            background-color: #d9d9d9;
+            padding: 10px 50px;
+        }
+
+        .main-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .main-nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .main-nav ul li a {
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        /* Logo */
+        .logo { display: flex; align-items: center; text-decoration: none; }
+        .logo-icon { width: 40px; height: 40px; background: #0056b3; border-radius: 8px; margin-right: 12px; display: flex; justify-content: center; align-items: center; }
+        .person { width: 12px; height: 12px; background: white; border-radius: 50%; position: relative; }
+        .person::after { content: ''; position: absolute; top: 14px; left: -4px; width: 20px; height: 10px; background: white; border-radius: 10px 10px 0 0; }
+        .logo-text { display: flex; flex-direction: column; line-height: 1; }
+        .brand-name { font-size: 20px; font-weight: 800; color: #333; }
+        .tagline { font-size: 9px; text-transform: uppercase; color: #777; margin-top: 2px; }
+
+        /* Secțiunea Hero */
+        #hero {
+            background-color: #c9c0b3; 
+            margin: 30px 50px;
+            padding: 40px;
+            border-radius: 40px;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .hero-img {
+            width: 350px;
+            height: 200px;
+            border-radius: 15px;
+            object-fit: cover;
+        }
+
+        .hero-content h1 {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        /* Secțiunea Servicii (Carduri) */
+        #servicii {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px 50px;
+        }
+
+        .card {
+            background-color: #e0f2f1;
+            border: 4px solid #80cbc4;
+            border-radius: 25px;
+            padding: 25px;
+            width: 30%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /* Stilul actualizat pentru Iconiță LÂNGĂ Text */
+        .card h3 {
+            font-size: 19px;
+            margin-top: 0;
+            display: flex;
+            flex-direction: row; /* Aliniere pe rând */
+            align-items: center; /* Centrare verticală */
+            justify-content: center; /* Centrare orizontală în card */
+            gap: 12px; /* Spațiu între iconiță și text */
+        }
+
+        .card-icon {
+            width: 60px; /* Mărime optimă pentru a sta lângă text */
+            height: 60px;
+            object-fit: contain;
+            flex-shrink: 0; /* Previne micșorarea pozei dacă textul e lung */
+        }
+
+        /* Butoane */
+        .btn {
+            background-color: #4292c6;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0b535e;
+            color: white;
+            padding: 20px 50px;
+            margin-top: 40px;
+        }
+
+        .footer-content p {
+            margin: 5px 0;
+            font-size: 18px;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Antetul paginii -->
     <header>
-        <nav>
-            <!-- Aici va veni meniul de navigare în Ziua 2 -->
-            <strong>[Logo Proiect]</strong>
+        <nav class="main-nav">
+            <div class="logo-box">
+                <a href="/" class="logo">
+                    <div class="logo-icon"><span class="person"></span></div>
+                    <div class="logo-text">
+                        <span class="brand-name">RECRUTARE</span>
+                        <span class="tagline">Agenție de Plasare a Forței de Muncă</span>
+                    </div>
+                </a>
+            </div>
+            <ul>
+                <li><a href="#">Acasă</a></li>
+                <li><a href="#">Servicii</a></li>
+                <li><a href="#">Despre</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
         </nav>
     </header>
 
-    <!-- Conținutul principal -->
     <main>
         <section id="hero">
-            <h1>Bun venit la proiectul meu: [Recrutare	Agenție de Plasare a Forței de Muncă Șomeri, angajatori]</h1>
-            <p>Această pagină este în curs de dezvoltare în cadrul stagiului de practică.</p>
+            <img src="assets/img/recruitare.png" alt="Echipa AgencyRecruit" class="hero-img">
+            <div class="hero-content">
+                <h1 class="hero-title">Găsiți Talentul și Locul de Muncă Ideal, Împreună</h1>
+                <p class="hero-description">Servicii Complete de Recrutare pentru Companii și Profesioniști din Toate Domeniile</p>
+            </div>
+        </section>
+
+        <section id="servicii">
+            <article class="card">
+                <h3>
+                    <img src="assets/img/icon1.png" alt="" class="card-icon">
+                    Recrutare de Personal
+                </h3>
+                <p>Identificăm și selectăm candidați calificați pentru nevoile specifice ale companiei dumneavoastră.</p>
+                <a href="#" class="btn">Solicitați Oferta</a>
+            </article>
+
+            <article class="card">
+                <h3>
+                    <img src="assets/img/icon2.png" alt="" class="card-icon">
+                    Consiliere în Carieră
+                </h3>
+                <p>Ajutor pentru șomeri și profesioniști în definirea carierei și pregătirea pentru noi oportunități.</p>
+                <a href="#" class="btn">Începeți Acum</a>
+            </article>
+
+            <article class="card">
+                <h3>
+                    <img src="assets/img/icon3.png" alt="" class="card-icon">
+                    Management HR
+                </h3>
+                <p>Suport complet pentru integrare, dezvoltare și evaluare a performanței angajaților.</p>
+                <a href="#" class="btn">Discutați cu noi</a>
+            </article>
         </section>
     </main>
 
-    <!-- Subsolul paginii -->
     <footer>
-        <p>&copy; 2026 - Colegiul UTM. Realizat de [Stodolnean Sergiu].</p>
+        <div class="footer-content">
+            <p>Adresă: Strada Republicii, Nr. 12, Chișinău</p>
+            <p>Telefon: +373 xxx xx xxx</p>
+            <p>Email: contact@recrutare.md</p>
+        </div>
     </footer>
 
 </body>
