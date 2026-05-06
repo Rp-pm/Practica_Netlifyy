@@ -1,0 +1,128 @@
+/* Resetare de bază */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Header & Navigație */
+        header {
+            background-color: #d9d9d9;
+            padding: 10px 50px;
+        }
+
+        .main-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .main-nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .main-nav ul li a {
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        /* Logo */
+        .logo { display: flex; align-items: center; text-decoration: none; }
+        .logo-icon { width: 40px; height: 40px; background: #0056b3; border-radius: 8px; margin-right: 12px; display: flex; justify-content: center; align-items: center; }
+        .person { width: 12px; height: 12px; background: white; border-radius: 50%; position: relative; }
+        .person::after { content: ''; position: absolute; top: 14px; left: -4px; width: 20px; height: 10px; background: white; border-radius: 10px 10px 0 0; }
+        .logo-text { display: flex; flex-direction: column; line-height: 1; }
+        .brand-name { font-size: 20px; font-weight: 800; color: #333; }
+        .tagline { font-size: 9px; text-transform: uppercase; color: #777; margin-top: 2px; }
+
+        /* Secțiunea Hero */
+        #hero {
+            background-color: #c9c0b3; 
+            margin: 30px 50px;
+            padding: 40px;
+            border-radius: 40px;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .hero-img {
+            width: 350px;
+            height: 200px;
+            border-radius: 15px;
+            object-fit: cover;
+        }
+
+        .hero-content h1 {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        /* Secțiunea Servicii (Carduri) */
+        #servicii {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px 50px;
+        }
+
+        .card {
+            background-color: #e0f2f1;
+            border: 4px solid #80cbc4;
+            border-radius: 25px;
+            padding: 25px;
+            width: 30%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /* Stilul actualizat pentru Iconiță LÂNGĂ Text */
+        .card h3 {
+            font-size: 19px;
+            margin-top: 0;
+            display: flex;
+            flex-direction: row; /* Aliniere pe rând */
+            align-items: center; /* Centrare verticală */
+            justify-content: center; /* Centrare orizontală în card */
+            gap: 12px; /* Spațiu între iconiță și text */
+        }
+
+        .card-icon {
+            width: 60px; /* Mărime optimă pentru a sta lângă text */
+            height: 60px;
+            object-fit: contain;
+            flex-shrink: 0; /* Previne micșorarea pozei dacă textul e lung */
+        }
+
+        /* Butoane */
+        .btn {
+            background-color: #4292c6;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0b535e;
+            color: white;
+            padding: 20px 50px;
+            margin-top: 40px;
+        }
+
+        .footer-content p {
+            margin: 5px 0;
+            font-size: 18px;
+        }
