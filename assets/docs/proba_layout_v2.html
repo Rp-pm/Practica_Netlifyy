@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigație Smart</title>
+
+    <style>
+
+        /* Elimin marginile implicite */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+        }
+
+        /* ================= NAVBAR ================= */
+
+        .navbar {
+
+            /*
+                position: sticky menține meniul vizibil
+                în partea de sus în timpul scroll-ului
+            */
+            position: sticky;
+
+            /* Distanța față de partea superioară */
+            top: 0;
+
+            /*
+                z-index controlează ordinea elementelor.
+                Valoarea mare împiedică acoperirea meniului.
+            */
+            z-index: 1000;
+
+            /*
+                Fundal semi-transparent folosind rgba
+                Ultima valoare (0.8) reprezintă transparența
+            */
+            background-color: rgba(255, 255, 255, 0.8);
+
+            /*
+                backdrop-filter aplică efect de blur
+                elementelor aflate în spatele navbarului
+            */
+            backdrop-filter: blur(10px);
+
+            /*
+                Activez Flexbox pentru organizarea conținutului
+            */
+            display: flex;
+
+            /*
+                Logo-ul este împins în stânga,
+                iar link-urile în dreapta
+            */
+            justify-content: space-between;
+
+            /* Centrez elementele pe verticală */
+            align-items: center;
+
+            /* Spațiere interioară */
+            padding: 15px 40px;
+
+            /* Linie subtilă jos */
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        /* ================= LOGO ================= */
+
+        .logo {
+
+            /* Dimensiune text */
+            font-size: 28px;
+
+            /* Text îngroșat */
+            font-weight: bold;
+
+            /* Culoare text */
+            color: #222;
+        }
+
+        /* ================= LINK-URI ================= */
+
+        .nav-links {
+
+            /* Așez link-urile pe orizontală */
+            display: flex;
+
+            /* Spațiu între link-uri */
+            gap: 25px;
+        }
+
+        .nav-links a {
+
+            /* Elimin sublinierea */
+            text-decoration: none;
+
+            /* Culoare text */
+            color: #222;
+
+            /* Text semi-bold */
+            font-weight: 600;
+
+            /* Tranziție lină la hover */
+            transition: 0.3s;
+        }
+
+        /* Efect la trecerea mouse-ului */
+        .nav-links a:hover {
+
+            /* Schimb culoarea */
+            color: royalblue;
+        }
+
+        /* ================= CONȚINUT PAGINĂ ================= */
+
+        .content {
+
+            /* Spațiu interior */
+            padding: 40px;
+
+            /* Înălțime mare pentru a demonstra sticky */
+            height: 200vh;
+        }
+
+        .box {
+
+            /* Stilizare card */
+            background: white;
+            padding: 30px;
+            margin-bottom: 25px;
+            border-radius: 12px;
+
+            /* Umbră discretă */
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+    </style>
+</head>
+<body>
+
+    <!--
+        Pentru structurarea meniului am utilizat Flexbox.
+        Proprietatea justify-content: space-between
+        separă logo-ul de zona cu link-uri.
+
+        position: sticky păstrează meniul vizibil
+        în timpul scroll-ului.
+
+        backdrop-filter: blur(10px)
+        creează efectul modern de Glassmorphism.
+    -->
+
+    <!-- Bara de navigație -->
+    <nav class="navbar">
+
+        <!-- Logo -->
+        <div class="logo">
+            MySite
+        </div>
+
+        <!-- Link-uri -->
+        <div class="nav-links">
+            <a href="#">Acasă</a>
+            <a href="#">Servicii</a>
+            <a href="#">Portofoliu</a>
+            <a href="#">Contact</a>
+        </div>
+
+    </nav>
+
+    <!-- Conținut pagină -->
+    <div class="content">
+
+        <div class="box">
+            <h2>Secțiune 1</h2>
+            <p>
+                Această zonă există pentru a demonstra efectul sticky
+                al meniului în timpul scroll-ului.
+            </p>
+        </div>
+
+        <div class="box">
+            <h2>Secțiune 2</h2>
+            <p>
+                Fundalul semi-transparent împreună cu blur-ul
+                oferă un aspect modern de tip Glassmorphism.
+            </p>
+        </div>
+
+        <div class="box">
+            <h2>Secțiune 3</h2>
+            <p>
+                Navbar-ul rămâne mereu vizibil datorită
+                proprietății position: sticky.
+            </p>
+        </div>
+
+    </div>
+
+</body>
+</html>

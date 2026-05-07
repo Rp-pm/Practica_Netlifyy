@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Provocare Flexbox și Grid</title>
+
+    <style>
+
+        /* Elimin marginile implicite ale paginii */
+        body {
+            margin: 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Adaug spațiu între secțiuni */
+        h1 {
+            margin-top: 40px;
+        }
+
+        /* ================= FLEXBOX ================= */
+
+        /* Containerul principal */
+        .flex-container {
+
+            /* Înălțimea containerului = 80% din ecran */
+            height: 80vh;
+
+            /* Bordură dublă */
+            border: 6px double black;
+
+            /* Activez Flexbox */
+            display: flex;
+
+            /* Elementele sunt așezate pe coloană */
+            flex-direction: column;
+
+            /* Spațiu interior */
+            padding: 10px;
+        }
+
+        /* Stil comun pentru toate box-urile */
+        .box {
+
+            /* Dimensiunea pătratelor */
+            width: 120px;
+            height: 120px;
+
+            /* Stilizare text */
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+
+            /* Centrez textul în interior */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Box-ul din stânga-sus */
+        .box-1 {
+
+            /* Culoare fundal */
+            background-color: crimson;
+
+            /* Poziționez elementul în stânga */
+            align-self: flex-start;
+        }
+
+        /* Box-ul din centru */
+        .box-2 {
+
+            /* Culoare fundal */
+            background-color: royalblue;
+
+            /*
+                margin: auto împinge elementul
+                astfel încât acesta să fie
+                perfect centrat pe ambele axe
+            */
+            margin: auto;
+        }
+
+        /* Box-ul din dreapta-jos */
+        .box-3 {
+
+            /* Culoare fundal */
+            background-color: seagreen;
+
+            /* Mut elementul în dreapta */
+            align-self: flex-end;
+        }
+
+        /* ================= GRID ================= */
+
+        /* Containerul Grid */
+        .grid-container {
+
+            /* Activez CSS Grid */
+            display: grid;
+
+            /* Creez 2 coloane egale */
+            grid-template-columns: 1fr 1fr;
+
+            /* Spațiul dintre elemente */
+            gap: 25px;
+
+            /* Fundal transparent */
+            background: rgba(0, 0, 0, 0.15);
+
+            /* Spațiu interior */
+            padding: 25px;
+
+            /* Distanță față de Flexbox */
+            margin-top: 50px;
+        }
+
+        /* Stil comun pentru elementele Grid */
+        .grid-item {
+
+            /* Spațiu interior */
+            padding: 40px;
+
+            /* Centrez textul */
+            text-align: center;
+
+            /* Stilizare text */
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+        }
+
+        /* Primul element */
+        .item-1 {
+
+            /* Culoare fundal */
+            background: tomato;
+
+            /* Elementul ocupă 2 coloane */
+            grid-column: 1 / 3;
+        }
+
+        /* Al doilea element */
+        .item-2 {
+
+            /* Culoare fundal */
+            background: steelblue;
+        }
+
+        /* Al treilea element */
+        .item-3 {
+
+            /* Culoare fundal */
+            background: mediumseagreen;
+        }
+
+        /* Al patrulea element */
+        .item-4 {
+
+            /* Culoare fundal */
+            background: purple;
+
+            /* Ocupă toată lățimea */
+            grid-column: 1 / 3;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>A. Provocarea Flexbox</h1>
+
+    <!--
+        Pentru poziționarea diferită a elementelor am utilizat:
+
+        - align-self: flex-start
+          pentru poziționarea în stânga.
+
+        - align-self: flex-end
+          pentru poziționarea în dreapta.
+
+        - margin: auto
+          pentru centrarea completă a elementului.
+    -->
+
+    <div class="flex-container">
+
+        <div class="box box-1">1</div>
+
+        <div class="box box-2">2</div>
+
+        <div class="box box-3">3</div>
+
+    </div>
+
+    <h1>B. Provocarea Grid</h1>
+
+    <div class="grid-container">
+
+        <div class="grid-item item-1">
+            Element 1
+        </div>
+
+        <div class="grid-item item-2">
+            Element 2
+        </div>
+
+        <div class="grid-item item-3">
+            Element 3
+        </div>
+
+        <div class="grid-item item-4">
+            Element 4
+        </div>
+
+    </div>
+
+</body>
+</html>

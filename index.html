@@ -3,79 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Proiect de practică - Colegiul UTM">
-    <meta name="author" content="Stodolnean Sergiu">
-    <title>AgencyRecruit | Recrutare și Plasare</title>
+    <title>AgencyRecruit</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
 
-    <header>
-        <nav class="main-nav">
-            <div class="logo-box">
-                <a href="/" class="logo">
-                    <div class="logo-icon"><span class="person"></span></div>
-                    <div class="logo-text">
-                        <span class="brand-name">RECRUTARE</span>
-                        <span class="tagline">Agenție de Plasare a Forței de Muncă</span>
-                    </div>
-                </a>
-            </div>
-            <ul>
-                <li><a href="#">Acasă</a></li>
-                <li><a href="#">Servicii</a></li>
-                <li><a href="#">Despre</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+    <nav class="main-nav">
 
-    <main>
-        <section id="hero">
-            <img src="assets/img/recruitare.png" alt="Echipa AgencyRecruit" class="hero-img">
-            <div class="hero-content">
-                <h1 class="hero-title">Găsiți Talentul și Locul de Muncă Ideal, Împreună</h1>
-                <p class="hero-description">Servicii Complete de Recrutare pentru Companii și Profesioniști din Toate Domeniile</p>
-            </div>
-        </section>
+        <!-- LOGO COMPLET -->
+        <div class="logo-box">
+            <a href="#hero" class="logo">
+                <div class="logo-icon">
+                    <span class="person"></span>
+                </div>
 
-        <section id="servicii">
-            <article class="card">
-                <h3>
-                    <img src="assets/img/icon1.png" alt="" class="card-icon">
-                    Recrutare de Personal
-                </h3>
-                <p>Identificăm și selectăm candidați calificați pentru nevoile specifice ale companiei dumneavoastră.</p>
-                <a href="#" class="btn">Solicitați Oferta</a>
-            </article>
-
-            <article class="card">
-                <h3>
-                    <img src="assets/img/icon2.png" alt="" class="card-icon">
-                    Consiliere în Carieră
-                </h3>
-                <p>Ajutor pentru șomeri și profesioniști în definirea carierei și pregătirea pentru noi oportunități.</p>
-                <a href="#" class="btn">Începeți Acum</a>
-            </article>
-
-            <article class="card">
-                <h3>
-                    <img src="assets/img/icon3.png" alt="" class="card-icon">
-                    Management HR
-                </h3>
-                <p>Suport complet pentru integrare, dezvoltare și evaluare a performanței angajaților.</p>
-                <a href="#" class="btn">Discutați cu noi</a>
-            </article>
-        </section>
-    </main>
-
-    <footer>
-        <div class="footer-content">
-            <p>Adresă: Strada Republicii, Nr. 12, Chișinău</p>
-            <p>Telefon: +373 xxx xx xxx</p>
-            <p>Email: contact@recrutare.md</p>
+                <div class="logo-text">
+                    <span class="brand-name">RECRUTARE</span>
+                    <span class="tagline">Agenție de Plasare</span>
+                </div>
+            </a>
         </div>
-    </footer>
+
+        <!-- NAV MENU -->
+        <ul>
+            <li><a href="#hero">Acasă</a></li>
+            <li><a href="#servicii">Servicii</a></li>
+            <li><a href="#misiune">Misiune</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+    </nav>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section id="hero">
+    <img src="assets/img/recruitare.png" class="hero-img" alt="Echipa AgencyRecruit">
+
+    <div class="hero-content">
+        <h1>Găsește jobul potrivit</h1>
+        <p>Recrutare modernă și rapidă</p>
+    </div>
+</section>
+
+<!-- SERVICII GRID -->
+<section id="servicii">
+    
+ <h2>Serviciile Noastre</h2>
+
+    <article class="card">
+        <h3>Recrutare</h3>
+        <p>Selectăm candidați potriviți.</p>
+        <a href="#" class="btn">Detalii</a>
+    </article>
+
+    <article class="card">
+        <h3>Carieră</h3>
+        <p>Orientare profesională.</p>
+        <a href="#" class="btn">Start</a>
+    </article>
+
+    <article class="card">
+        <h3>HR</h3>
+        <p>Management resurse umane.</p>
+        <a href="#" class="btn">Info</a>
+    </article>
+
+    <article class="card">
+        <h3>Training</h3>
+        <p>Cursuri profesionale.</p>
+        <a href="#" class="btn">Cursuri</a>
+    </article>
+
+    <article class="card">
+        <h3>CV Review</h3>
+        <p>Optimizare CV.</p>
+        <a href="#" class="btn">Verifică</a>
+    </article>
+
+    <article class="card">
+        <h3>AI Matching</h3>
+        <p>Potrivire automată job-candidat.</p>
+        <a href="#" class="btn">Explorează</a>
+    </article>
+
+</section>
+
+<!-- MISIUNE -->
+<section id="misiune" class="misiune">
+
+    <div class="misiune-container">
+
+        <div class="misiune-img">
+            <img src="assets/img/recruit1.jpg" alt="Misiune">
+        </div>
+
+        <div class="misiune-text">
+            <h2>Misiunea Noastră</h2>
+            <p>
+                Conectăm oamenii cu oportunitățile potrivite și ajutăm companiile
+                să găsească talentele ideale prin soluții moderne de recrutare.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <h2>Contact</h2>
+    <p>Chișinău, Moldova</p>
+    <p>+373 xxx xx xxx</p>
+    <p>contact@recrutare.md</p>
+</section>
+
+</main>
+
+<footer>
+    <p>© 2026 AgencyRecruit</p>
+</footer>
 
 </body>
 </html>
