@@ -46,6 +46,7 @@
     <div class="hero-content">
         <h1>Găsește jobul potrivit</h1>
         <p>Recrutare modernă și rapidă</p>
+        <a href="assets/docs/test_formular.html" class="btn hero-btn">Completează Formularul</a>
     </div>
 </section>
 
@@ -92,6 +93,66 @@
 
 </section>
 
+<!-- FORMULAR CONTACT -->
+<section id="formular" class="formular-section">
+    <div class="formular-grid">
+        <div class="formular-card">
+            <h2>Trimite-ne un mesaj</h2>
+            <p>Completează datele personale și spune-ne ce serviciu te interesează.</p>
+            <form id="contactForm">
+                <fieldset>
+                    <legend>Date personale</legend>
+
+                    <label for="fullname">Nume complet</label>
+                    <input type="text" id="fullname" name="fullname" autocomplete="name" required placeholder="Ion Popescu">
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" autocomplete="email" required placeholder="ion@exemplu.md">
+
+                    <label for="phone">Telefon</label>
+                    <input type="tel" id="phone" name="phone" autocomplete="tel" required placeholder="+373 600 000 00">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Mesaj și subiect</legend>
+
+                    <label for="service">Serviciu de interes</label>
+                    <select id="service" name="service" required>
+                        <option value="">Alege un serviciu</option>
+                        <option value="recrutare">Recrutare</option>
+                        <option value="cariera">Carieră</option>
+                        <option value="hr">HR</option>
+                        <option value="training">Training</option>
+                        <option value="cv">CV Review</option>
+                        <option value="matching">AI Matching</option>
+                    </select>
+
+                    <label for="message">Mesaj</label>
+                    <textarea id="message" name="message" rows="6" maxlength="250" autocomplete="on" required placeholder="Scrie-ne ce ai nevoie..."></textarea>
+                    <div class="char-counter"><span id="remainingChars">250</span> caractere rămase</div>
+                </fieldset>
+
+                <button class="btn" type="submit">Trimite mesaj</button>
+            </form>
+        </div>
+
+        <aside class="formular-sidebar">
+            <h3>Detalii de contact</h3>
+            <p>Chișinău, Moldova</p>
+            <p>Tel: +373 000 000 00</p>
+            <p>Email: contact@recrutare.md</p>
+            <p>Program: L-V 9:00 - 18:00</p>
+
+            <div class="map-wrapper">
+                <iframe
+                    src="https://www.google.com/maps?q=Chisinau,+Moldova&output=embed"
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </aside>
+    </div>
+</section>
+
 <!-- MISIUNE -->
 <section id="misiune" class="misiune">
 
@@ -122,6 +183,26 @@
 </section>
 
 </main>
+
+<script>
+    const messageTextarea = document.getElementById('message');
+    const remainingChars = document.getElementById('remainingChars');
+    if (messageTextarea && remainingChars) {
+        const updateCount = () => {
+            remainingChars.textContent = 250 - messageTextarea.value.length;
+        };
+        messageTextarea.addEventListener('input', updateCount);
+        updateCount();
+    }
+
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Mesaj trimis! Vom reveni în curând.');
+        });
+    }
+</script>
 
 <footer>
     <p>© 2026 AgencyRecruit</p>
