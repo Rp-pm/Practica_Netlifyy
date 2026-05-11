@@ -136,10 +136,48 @@ header {
    distribuie automat spațiul între coloane
 */
 #servicii {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
+    display: block;
     padding: 40px 50px;
+}
+
+#servicii h2 {
+    margin-bottom: 28px;
+    font-size: 2.2rem;
+    color: #0f3d70;
+}
+
+.servicii-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.servicii-grid .card {
+    flex: 1 1 calc(33.333% - 20px);
+    min-width: 280px;
+    max-width: 100%;
+}
+
+@media (max-width: 992px) {
+    .servicii-grid .card {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    #servicii {
+        padding: 30px 20px;
+    }
+
+    .servicii-grid {
+        gap: 16px;
+    }
+
+    .servicii-grid .card {
+        flex: 1 1 100%;
+        min-width: auto;
+    }
 }
 
 .formular-section {
@@ -373,4 +411,278 @@ footer {
     padding: 20px;
     background: #0b535e;
     color: white;
+}
+
+/* TABEL POZIȚII */
+.tabel-section {
+    padding: 50px 50px;
+    background: linear-gradient(180deg, #f5fafd 0%, #e8f4f9 100%);
+}
+
+.tabel-section h2 {
+    text-align: center;
+    color: #0f3d70;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    margin-top: 0;
+    font-weight: 800;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.table-wrapper {
+    overflow-x: auto;
+    padding-bottom: 8px;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05);
+    border-radius: 18px;
+    background: white;
+}
+
+.pozitii-table {
+    width: 100%;
+    min-width: 860px;
+    border-collapse: collapse;
+    background: white;
+}
+
+.pozitii-table thead {
+    background: linear-gradient(135deg, #0056b3 0%, #4292c6 100%);
+    color: white;
+}
+
+.pozitii-table thead th {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    padding: 18px 20px;
+    text-align: left;
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: #ffffff;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.22);
+}
+
+.pozitii-table tbody tr {
+    border-bottom: 1px solid #e0e8f0;
+    transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.pozitii-table tbody tr:hover {
+    background-color: #edf5ff;
+    box-shadow: inset 0 0 14px rgba(66, 146, 198, 0.12);
+    transform: translateY(-1px);
+}
+
+.pozitii-table tbody td {
+    padding: 16px 18px;
+    color: #233147;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.pozitii-table tbody td strong {
+    color: #1a4a82;
+    font-weight: 700;
+}
+
+.pozitii-table tbody tr:nth-child(even) {
+    background-color: #f7fbff;
+}
+
+.pozitii-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+/* COLSPAN ȘI ROWSPAN STYLING */
+.pozitii-table tbody td[colspan],
+.pozitii-table tbody td[rowspan] {
+    background-color: #e8f1ff;
+    font-weight: 600;
+    color: #004494;
+    border-left: 4px solid #0056b3;
+}
+
+.pozitii-table tbody tr.highlight-row {
+    background: linear-gradient(90deg, rgba(66, 146, 198, 0.08) 0%, rgba(66, 146, 198, 0.02) 100%);
+}
+
+.pozitii-table tbody tr.highlight-row td {
+    background-color: #eff6ff;
+    font-weight: 600;
+    color: #0f3d70;
+    box-shadow: inset 0 0 8px rgba(66, 146, 198, 0.12);
+}
+
+@media (max-width: 768px) {
+    .tabel-section {
+        padding: 30px 20px;
+    }
+
+    .tabel-section h2 {
+        font-size: 1.8rem;
+        margin-bottom: 25px;
+    }
+
+    .pozitii-table thead th,
+    .pozitii-table tbody td {
+        padding: 12px 10px;
+        font-size: 0.85rem;
+    }
+
+    .pozitii-table thead th {
+        font-size: 0.8rem;
+    }
+}
+
+/* DESPRE SECTION */
+.despre-section {
+    padding: 60px 50px;
+    background: linear-gradient(180deg, #ffffff 0%, #f5fafd 100%);
+}
+
+.despre-section h2 {
+    text-align: center;
+    color: #0f3d70;
+    font-size: 2.4rem;
+    margin-bottom: 50px;
+    margin-top: 0;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.despre-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.video-presentation,
+.location-map {
+    background: white;
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(35, 54, 77, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.video-presentation:hover,
+.location-map:hover {
+    box-shadow: 0 16px 40px rgba(35, 54, 77, 0.15);
+}
+
+.despre-section h3 {
+    color: #0056b3;
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.video-wrapper {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #f0f0f0;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 16px;
+}
+
+.video-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+
+.video-description {
+    color: #526675;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    margin: 0;
+}
+
+.map-container {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #f0f0f0;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+
+.map-info {
+    background: #f8fbff;
+    padding: 18px;
+    border-left: 4px solid #0056b3;
+    border-radius: 8px;
+}
+
+.map-info p {
+    margin: 10px 0;
+    color: #233147;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.map-info p:first-child {
+    margin-top: 0;
+}
+
+.map-info p:last-child {
+    margin-bottom: 0;
+}
+
+.map-info strong {
+    color: #0056b3;
+    font-weight: 700;
+}
+
+@media (max-width: 1024px) {
+    .despre-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .despre-section {
+        padding: 40px 20px;
+    }
+
+    .despre-section h2 {
+        font-size: 1.8rem;
+        margin-bottom: 35px;
+    }
+
+    .video-presentation,
+    .location-map {
+        padding: 20px;
+        border-radius: 12px;
+    }
+
+    .despre-section h3 {
+        font-size: 1.2rem;
+        margin-bottom: 16px;
+    }
+
+    .video-wrapper,
+    .map-container {
+        aspect-ratio: 16 / 9;
+        margin-bottom: 12px;
+    }
+
+    .map-info {
+        padding: 14px;
+        font-size: 0.9rem;
+    }
 }

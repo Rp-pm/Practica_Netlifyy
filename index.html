@@ -31,6 +31,7 @@
             <li><a href="#hero">Acasă</a></li>
             <li><a href="#servicii">Servicii</a></li>
             <li><a href="#misiune">Misiune</a></li>
+            <li><a href="#despre">Despre</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
 
@@ -52,45 +53,111 @@
 
 <!-- SERVICII GRID -->
 <section id="servicii">
-    
- <h2>Serviciile Noastre</h2>
+    <h2>Serviciile Noastre</h2>
+    <div class="servicii-grid">
+        <article class="card">
+            <h3>Recrutare</h3>
+            <p>Selectăm candidați potriviți.</p>
+            <a href="#" class="btn">Detalii</a>
+        </article>
 
-    <article class="card">
-        <h3>Recrutare</h3>
-        <p>Selectăm candidați potriviți.</p>
-        <a href="#" class="btn">Detalii</a>
-    </article>
+        <article class="card">
+            <h3>Carieră</h3>
+            <p>Orientare profesională.</p>
+            <a href="#" class="btn">Start</a>
+        </article>
 
-    <article class="card">
-        <h3>Carieră</h3>
-        <p>Orientare profesională.</p>
-        <a href="#" class="btn">Start</a>
-    </article>
+        <article class="card">
+            <h3>HR</h3>
+            <p>Management resurse umane.</p>
+            <a href="#" class="btn">Info</a>
+        </article>
 
-    <article class="card">
-        <h3>HR</h3>
-        <p>Management resurse umane.</p>
-        <a href="#" class="btn">Info</a>
-    </article>
+        <article class="card">
+            <h3>Training</h3>
+            <p>Cursuri profesionale.</p>
+            <a href="#" class="btn">Cursuri</a>
+        </article>
 
-    <article class="card">
-        <h3>Training</h3>
-        <p>Cursuri profesionale.</p>
-        <a href="#" class="btn">Cursuri</a>
-    </article>
+        <article class="card">
+            <h3>CV Review</h3>
+            <p>Optimizare CV.</p>
+            <a href="#" class="btn">Verifică</a>
+        </article>
 
-    <article class="card">
-        <h3>CV Review</h3>
-        <p>Optimizare CV.</p>
-        <a href="#" class="btn">Verifică</a>
-    </article>
+        <article class="card">
+            <h3>AI Matching</h3>
+            <p>Potrivire automată job-candidat.</p>
+            <a href="#" class="btn">Explorează</a>
+        </article>
+    </div>
+</section>
 
-    <article class="card">
-        <h3>AI Matching</h3>
-        <p>Potrivire automată job-candidat.</p>
-        <a href="#" class="btn">Explorează</a>
-    </article>
-
+<!-- TABEL POZIȚII DISPONIBILE -->
+<section id="tabel-pozitii" class="tabel-section">
+    <h2>Poziții Disponibile</h2>
+    <div class="table-wrapper">
+        <table class="pozitii-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Funcție</th>
+                    <th>Departament</th>
+                    <th>Locație</th>
+                    <th>Salariu (MDL)</th>
+                    <th>Tip Contract</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>001</td>
+                <td colspan="2"><strong>Developer Senior</strong> - Frontend & Backend</td>
+                <td>Chișinău</td>
+                <td>10000 - 14000</td>
+                <td>Full-time</td>
+            </tr>
+            <tr>
+                <td>002</td>
+                <td>Project Manager</td>
+                <td>Management</td>
+                <td>Chișinău</td>
+                <td>9000 - 11000</td>
+                <td>Full-time</td>
+            </tr>
+            <tr>
+                <td rowspan="2">003</td>
+                <td>Designer UI/UX</td>
+                <td>Design</td>
+                <td>Chișinău</td>
+                <td>7000 - 9000</td>
+                <td>Full-time</td>
+            </tr>
+            <tr>
+                <td>Designer Grafic</td>
+                <td>Design</td>
+                <td>Bălți</td>
+                <td>5000 - 7000</td>
+                <td>Part-time</td>
+            </tr>
+            <tr>
+                <td>004</td>
+                <td>Business Analyst</td>
+                <td>Analiză</td>
+                <td>Orhei</td>
+                <td>8000 - 10000</td>
+                <td>Full-time</td>
+            </tr>
+            <tr class="highlight-row">
+                <td>005</td>
+                <td>HR Manager</td>
+                <td>Resurse Umane</td>
+                <td>Chișinău</td>
+                <td>7600 - 9600</td>
+                <td>Full-time</td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
 </section>
 
 <!-- FORMULAR CONTACT -->
@@ -174,11 +241,57 @@
 
 </section>
 
+<!-- DESPRE US -->
+<section id="despre" class="despre-section">
+    <h2>Despre Noi</h2>
+    
+    <div class="despre-container">
+        <!-- VIDEO PRESENTATION -->
+        <div class="video-presentation">
+            <h3>Ghidul Nostru de Recrutare</h3>
+            <div class="video-wrapper">
+                <iframe 
+                    width="100%" 
+                    height="450" 
+                    src="https://www.youtube.com/embed/8gKj0WQvQ6U" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <p class="video-description">Aflați cum suntem specializați în a conecta talentele cu oportunități potrivite pe piața din Moldova.</p>
+        </div>
+
+        <!-- LOCATION MAP -->
+        <div class="location-map">
+            <h3>Locația Noastră</h3>
+            <div class="map-container">
+                <iframe 
+                    width="100%" 
+                    height="450" 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2887.886282076647!2d28.356603!3d47.16087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c97c2b0b0b0b0b%3A0x0b0b0b0b0b0b0b0b!2sChishinau%2C%20Moldova!5e0!3m2!1sen!2smd!4v1234567890" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+            <div class="map-info">
+                <p><strong>Adresa:</strong> Chișinău, Moldova</p>
+                <p><strong>Tel:</strong> +373 xx xxx xxx</p>
+                <p><strong>Email:</strong> contact@recrutare.md</p>
+                <p><strong>Program:</strong> Luni - Vineri, 9:00 - 18:00</p>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- CONTACT -->
 <section id="contact">
-    <h2>Contact</h2>
+    <h2>Contact Rapid</h2>
     <p>Chișinău, Moldova</p>
-    <p>+373 xxx xx xxx</p>
+    <p>+373 xx xxx xxx</p>
     <p>contact@recrutare.md</p>
 </section>
 
