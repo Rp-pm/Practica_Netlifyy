@@ -1,0 +1,74 @@
+.page {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: radial-gradient(circle at top, #151515, #0b0b0b);
+  font-family: system-ui, Arial, sans-serif;
+}
+
+/* ================= FORM ================= */
+
+.form {
+  width: 360px;
+  padding: 28px;
+
+  background: var(--panel);
+  backdrop-filter: blur(var(--blur));
+
+  border: 1px solid var(--stroke);
+  border-radius: var(--radius);
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* focus glow global */
+.form:focus-within {
+  border-color: rgba(77, 163, 255, 0.25);
+  box-shadow: 0 10px 50px rgba(77, 163, 255, 0.08);
+}
+
+/* ================= FIELD ================= */
+
+.form__field {
+  position: relative;
+}
+
+/* ================= INPUT ================= */
+
+.form__input {
+  width: 100%;
+  padding: 14px 12px;
+
+  border-radius: var(--radius);
+  border: 1px solid var(--stroke);
+
+  background: rgba(255, 255, 255, 0.02);
+  color: var(--text);
+
+  outline: none;
+  transition: 0.2s ease;
+}
+
+.form__input:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* ================= CHECKBOX ================= */
+
+.form__terms {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.form__terms-label {
+  font-size: 14px;
+  color: var(--muted);
+}

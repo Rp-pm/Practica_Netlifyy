@@ -1,688 +1,1437 @@
-/*  GLOBAL  */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f4f4f4;
-    color: #333;
+```html
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AgencyRecruit — Theming Engine</title>
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+<!-- THEME TOGGLE -->
+<button id="themeToggle" class="theme-toggle">
+    🌙
+</button>
+
+<header>
+    <nav class="main-nav">
+
+        <!-- LOGO -->
+        <div class="logo-box">
+            <a href="#hero" class="logo">
+
+                <div class="logo-icon">
+                    <span class="person"></span>
+                </div>
+
+                <div class="logo-text">
+                    <span class="brand-name">RECRUTARE</span>
+                    <span class="tagline">Agenție de Plasare</span>
+                </div>
+
+            </a>
+        </div>
+
+        <!-- NAVIGATION -->
+        <ul>
+            <li><a href="#hero">Acasă</a></li>
+            <li><a href="#servicii">Servicii</a></li>
+            <li><a href="#formular">Formular</a></li>
+            <li><a href="#despre">Despre</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+    </nav>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section id="hero">
+
+    <img src="assets/img/recruitare.png"
+         alt="Recruit Team"
+         class="hero-img">
+
+    <div class="hero-content">
+        <h1>Găsește jobul potrivit</h1>
+
+        <p>
+            Platformă modernă de recrutare cu sistem inteligent
+            de matching și experiență UI avansată.
+        </p>
+
+        <a href="#formular" class="btn hero-btn">
+            Completează Formularul
+        </a>
+    </div>
+
+</section>
+
+<!-- SERVICII -->
+<section id="servicii">
+
+    <h2>Serviciile Noastre</h2>
+
+    <div class="servicii-grid">
+
+        <article class="card">
+            <h3>Recrutare</h3>
+            <p>Selectăm candidații ideali pentru compania ta.</p>
+            <a href="#" class="btn">Detalii</a>
+        </article>
+
+        <article class="card">
+            <h3>Carieră</h3>
+            <p>Consultanță profesională și dezvoltare personală.</p>
+            <a href="#" class="btn">Start</a>
+        </article>
+
+        <article class="card">
+            <h3>AI Matching</h3>
+            <p>Potrivire automată job-candidat prin algoritmi AI.</p>
+            <a href="#" class="btn">Explorează</a>
+        </article>
+
+        <article class="card">
+            <h3>Training</h3>
+            <p>Cursuri și workshop-uri pentru angajare rapidă.</p>
+            <a href="#" class="btn">Cursuri</a>
+        </article>
+
+        <article class="card">
+            <h3>HR Management</h3>
+            <p>Administrare și optimizare procese HR.</p>
+            <a href="#" class="btn">Info</a>
+        </article>
+
+        <article class="card">
+            <h3>CV Review</h3>
+            <p>Optimizare CV pentru interviuri și companii.</p>
+            <a href="#" class="btn">Verifică</a>
+        </article>
+
+    </div>
+
+</section>
+
+<!-- FORMULAR -->
+<section id="formular" class="formular-section">
+
+    <div class="formular-grid">
+
+        <!-- FORM -->
+        <div class="formular-card">
+
+            <h2>Trimite-ne un mesaj</h2>
+
+            <p>
+                Completează formularul pentru a fi contactat
+                de echipa noastră de recrutare.
+            </p>
+
+            <form id="contactForm">
+
+                <fieldset>
+
+                    <legend>Date personale</legend>
+
+                    <label for="fullname">Nume complet</label>
+
+                    <input
+                        type="text"
+                        id="fullname"
+                        placeholder="Ion Popescu"
+                        required
+                    />
+
+                    <label for="email">Email</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="ion@email.md"
+                        required
+                    />
+
+                    <label for="phone">Telefon</label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        placeholder="+373 600 000 00"
+                        required
+                    />
+
+                </fieldset>
+
+                <fieldset>
+
+                    <legend>Mesaj</legend>
+
+                    <label for="service">
+                        Serviciu
+                    </label>
+
+                    <select id="service" required>
+                        <option value="">
+                            Alege un serviciu
+                        </option>
+
+                        <option>Recrutare</option>
+                        <option>AI Matching</option>
+                        <option>Training</option>
+                        <option>HR</option>
+                    </select>
+
+                    <label for="message">
+                        Mesaj
+                    </label>
+
+                    <textarea
+                        id="message"
+                        rows="6"
+                        maxlength="250"
+                        placeholder="Scrie mesajul tău..."
+                        required>
+                    </textarea>
+
+                    <div class="char-counter">
+                        <span id="remainingChars">250</span>
+                        caractere rămase
+                    </div>
+
+                </fieldset>
+
+                <button class="btn submit-btn" type="submit">
+                    Trimite Mesaj
+                </button>
+
+            </form>
+
+        </div>
+
+        <!-- SIDEBAR -->
+        <aside class="formular-sidebar">
+
+            <h3>Date de Contact</h3>
+
+            <p>Chișinău, Moldova</p>
+            <p>+373 000 000 00</p>
+            <p>contact@recrutare.md</p>
+
+            <div class="map-wrapper">
+
+                <iframe
+                    src="https://www.google.com/maps?q=Chisinau,+Moldova&output=embed"
+                    loading="lazy">
+                </iframe>
+
+            </div>
+
+        </aside>
+
+    </div>
+
+</section>
+
+<!-- DESPRE -->
+<section id="despre" class="despre-section">
+
+    <h2>Despre Noi</h2>
+
+    <div class="despre-container">
+
+        <div class="video-presentation">
+
+            <h3>Video Prezentare</h3>
+
+            <div class="video-wrapper">
+
+                <iframe
+                    src="https://www.youtube.com/embed/8gKj0WQvQ6U"
+                    allowfullscreen>
+                </iframe>
+
+            </div>
+
+        </div>
+
+        <div class="location-map">
+
+            <h3>Locația Noastră</h3>
+
+            <div class="map-container">
+
+                <iframe
+                    src="https://www.google.com/maps?q=Chisinau,+Moldova&output=embed"
+                    loading="lazy">
+                </iframe>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+
+    <h2>Contact Rapid</h2>
+
+    <p>Chișinău, Moldova</p>
+    <p>contact@recrutare.md</p>
+    <p>+373 000 000 00</p>
+
+</section>
+
+</main>
+
+<footer>
+    <p>© 2026 AgencyRecruit</p>
+</footer>
+
+<script>
+
+/* =========================
+   CHARACTER COUNTER
+========================= */
+
+const messageTextarea =
+document.getElementById('message');
+
+const remainingChars =
+document.getElementById('remainingChars');
+
+if(messageTextarea){
+
+    const updateCounter = () => {
+
+        remainingChars.textContent =
+        250 - messageTextarea.value.length;
+    };
+
+    messageTextarea.addEventListener(
+        'input',
+        updateCounter
+    );
+
+    updateCounter();
 }
 
-html {
-    scroll-behavior: smooth;
-}
+/* =========================
+   FORM SUBMIT
+========================= */
 
-/*  HEADER  */
-header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+const contactForm =
+document.getElementById('contactForm');
 
-    background: rgba(255,255,255,0.8);
-    backdrop-filter: blur(10px);
+contactForm.addEventListener(
+    'submit',
+    (e) => {
 
-    border-bottom: 1px solid rgba(0,0,0,0.1);
-}
+        e.preventDefault();
 
-.main-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 50px;
-}
-
-.main-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 25px;
-    margin: 0;
-    padding: 0;
-}
-
-/* NAV LINKS ANIMATION */
-.main-nav ul li a {
-    position: relative;
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-    padding: 5px 0;
-}
-
-.main-nav ul li a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0%;
-    height: 2px;
-    background: #4292c6;
-    transition: width 0.3s ease;
-}
-
-.main-nav ul li a:hover::after {
-    width: 100%;
-}
-
-/*  LOGO  */
-.logo {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-}
-
-.logo-icon {
-    width: 40px;
-    height: 40px;
-    background: #0056b3;
-    border-radius: 8px;
-    margin-right: 12px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.person {
-    width: 12px;
-    height: 12px;
-    background: white;
-    border-radius: 50%;
-    position: relative;
-}
-
-.person::after {
-    content: '';
-    position: absolute;
-    top: 14px;
-    left: -4px;
-    width: 20px;
-    height: 10px;
-    background: white;
-    border-radius: 10px 10px 0 0;
-}
-
-.logo-text {
-    display: flex;
-    flex-direction: column;
-    line-height: 1;
-}
-
-.brand-name {
-    font-size: 20px;
-    font-weight: 800;
-    color: #333;
-}
-
-.tagline {
-    font-size: 9px;
-    text-transform: uppercase;
-    color: #777;
-}
-
-/*  HERO  */
-#hero {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    padding: 40px 50px;
-}
-
-.hero-img {
-    width: 320px;
-    border-radius: 12px;
-}
-
-/*  GRID AUTO-FIT  */
-/*
-   1fr = o fracțiune din spațiul disponibil
-   distribuie automat spațiul între coloane
-*/
-#servicii {
-    display: block;
-    padding: 40px 50px;
-}
-
-#servicii h2 {
-    margin-bottom: 28px;
-    font-size: 2.2rem;
-    color: #0f3d70;
-}
-
-.servicii-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-.servicii-grid .card {
-    flex: 1 1 calc(33.333% - 20px);
-    min-width: 280px;
-    max-width: 100%;
-}
-
-@media (max-width: 992px) {
-    .servicii-grid .card {
-        flex: 1 1 calc(50% - 20px);
+        alert(
+            'Mesaj trimis cu succes!'
+        );
     }
+);
+
+/* =========================
+   DARK MODE ENGINE
+========================= */
+
+const themeToggle =
+document.getElementById('themeToggle');
+
+themeToggle.addEventListener(
+    'click',
+    () => {
+
+        document.body.classList.toggle(
+            'dark-theme'
+        );
+
+        if(
+            document.body.classList.contains(
+                'dark-theme'
+            )
+        ){
+            themeToggle.innerHTML = '☀️';
+        }
+        else{
+            themeToggle.innerHTML = '🌙';
+        }
+    }
+);
+
+</script>
+
+</body>
+</html>
+```
+
+---
+
+```css
+/* =====================================================
+   GLOBAL RESET
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-@media (max-width: 768px) {
-    #servicii {
-        padding: 30px 20px;
-    }
-
-    .servicii-grid {
-        gap: 16px;
-    }
-
-    .servicii-grid .card {
-        flex: 1 1 100%;
-        min-width: auto;
-    }
+html{
+    scroll-behavior:smooth;
 }
 
-.formular-section {
-    padding: 50px 50px 60px;
-    background: linear-gradient(180deg, #eef6fb 0%, #f8fbff 100%);
+/* =====================================================
+   THEME ENGINE VARIABLES
+===================================================== */
+
+:root{
+
+    /* BACKGROUNDS */
+    --bg-primary:#f4f7fb;
+    --bg-secondary:#ffffff;
+    --bg-card:#ffffff;
+    --bg-soft:#eef6fb;
+
+    /* TEXT */
+    --text-primary:#233147;
+    --text-secondary:#526675;
+    --text-light:#7b8794;
+
+    /* BRAND */
+    --color-primary:#0056b3;
+    --color-secondary:#4292c6;
+
+    /* BORDERS */
+    --border-color:#d8e6f2;
+
+    /* GLASS */
+    --glass-bg:rgba(255,255,255,0.7);
+
+    /* SHADOWS */
+    --shadow-soft:
+        0 8px 25px rgba(0,0,0,0.08);
+
+    --shadow-hover:
+        0 20px 40px rgba(0,0,0,0.15);
+
+    /* GRADIENT */
+    --gradient-main:
+        linear-gradient(
+            135deg,
+            var(--color-primary),
+            var(--color-secondary)
+        );
 }
 
-.formular-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 30px;
-    align-items: start;
+/* =====================================================
+   DARK MODE
+===================================================== */
+
+body.dark-theme{
+
+    --bg-primary:#0d1721;
+    --bg-secondary:#13202d;
+    --bg-card:#1a2633;
+    --bg-soft:#162331;
+
+    --text-primary:#f5f7fa;
+    --text-secondary:#c3d0dd;
+    --text-light:#8ca0b3;
+
+    --color-primary:#58a9ff;
+    --color-secondary:#7cc7ff;
+
+    --border-color:#314455;
+
+    --glass-bg:
+        rgba(15,23,32,0.85);
+
+    --shadow-soft:
+        0 10px 30px rgba(0,0,0,0.45);
+
+    --shadow-hover:
+        0 20px 50px rgba(0,0,0,0.6);
+}
+
+/* =====================================================
+   BODY
+===================================================== */
+
+body{
+
+    font-family:Arial,sans-serif;
+
+    background:
+        var(--bg-primary);
+
+    color:
+        var(--text-primary);
+
+    transition:
+        background .4s ease,
+        color .4s ease;
+}
+
+/* =====================================================
+   THEME BUTTON
+===================================================== */
+
+.theme-toggle{
+
+    position:fixed;
+
+    right:25px;
+    bottom:25px;
+
+    width:60px;
+    height:60px;
+
+    border:none;
+    border-radius:50%;
+
+    cursor:pointer;
+
+    font-size:1.3rem;
+
+    background:
+        var(--gradient-main);
+
+    color:white;
+
+    box-shadow:
+        var(--shadow-soft);
+
+    z-index:9999;
+
+    transition:
+        transform .3s ease;
+}
+
+.theme-toggle:hover{
+    transform:scale(1.1);
+}
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+header{
+
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    background:
+        var(--glass-bg);
+
+    backdrop-filter:blur(12px);
+
+    border-bottom:
+        1px solid var(--border-color);
+}
+
+.main-nav{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:18px 60px;
+}
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.logo{
+
+    display:flex;
+    align-items:center;
+
+    text-decoration:none;
+}
+
+.logo-icon{
+
+    width:50px;
+    height:50px;
+
+    border-radius:14px;
+
+    background:
+        var(--gradient-main);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    margin-right:15px;
+
+    box-shadow:
+        var(--shadow-soft);
+}
+
+.person{
+
+    width:14px;
+    height:14px;
+
+    background:white;
+
+    border-radius:50%;
+
+    position:relative;
+}
+
+.person::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:16px;
+    left:-5px;
+
+    width:24px;
+    height:12px;
+
+    border-radius:12px 12px 0 0;
+
+    background:white;
+}
+
+.logo-text{
+    display:flex;
+    flex-direction:column;
+}
+
+.brand-name{
+
+    font-size:1.2rem;
+    font-weight:800;
+
+    color:
+        var(--text-primary);
+}
+
+.tagline{
+
+    font-size:.7rem;
+    letter-spacing:1px;
+
+    color:
+        var(--text-light);
+}
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+.main-nav ul{
+
+    display:flex;
+    gap:25px;
+
+    list-style:none;
+}
+
+.main-nav ul li a{
+
+    position:relative;
+
+    text-decoration:none;
+
+    color:
+        var(--text-primary);
+
+    font-weight:700;
+}
+
+.main-nav ul li a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    bottom:-5px;
+
+    width:0%;
+    height:2px;
+
+    background:
+        var(--color-secondary);
+
+    transition:
+        width .3s ease;
+}
+
+.main-nav ul li a:hover::after{
+    width:100%;
+}
+
+/* =====================================================
+   HERO
+===================================================== */
+
+#hero{
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    gap:50px;
+
+    padding:80px 60px;
+}
+
+.hero-img{
+
+    width:360px;
+
+    border-radius:20px;
+
+    box-shadow:
+        var(--shadow-soft);
+}
+
+.hero-content{
+
+    max-width:500px;
+}
+
+.hero-content h1{
+
+    font-size:3rem;
+
+    margin-bottom:20px;
+}
+
+.hero-content p{
+
+    line-height:1.8;
+
+    color:
+        var(--text-secondary);
+}
+
+/* =====================================================
+   BUTTON
+===================================================== */
+
+.btn{
+
+    display:inline-block;
+
+    margin-top:20px;
+
+    padding:14px 26px;
+
+    border-radius:12px;
+
+    text-decoration:none;
+
+    background:
+        var(--gradient-main);
+
+    color:white;
+
+    font-weight:700;
+
+    border:none;
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+.btn:hover{
+
+    transform:
+        translateY(-5px);
+
+    box-shadow:
+        var(--shadow-hover);
+}
+
+/* =====================================================
+   SERVICES
+===================================================== */
+
+#servicii{
+
+    padding:80px 60px;
+}
+
+#servicii h2{
+
+    text-align:center;
+
+    margin-bottom:50px;
+
+    font-size:2.5rem;
+}
+
+.servicii-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(280px,1fr));
+
+    gap:30px;
+}
+
+/* =====================================================
+   3D CARDS
+===================================================== */
+
+.card{
+
+    position:relative;
+
+    padding:35px;
+
+    border-radius:24px;
+
+    background:
+        var(--bg-card);
+
+    border:
+        1px solid var(--border-color);
+
+    box-shadow:
+        var(--shadow-soft);
+
+    overflow:hidden;
+
+    transition:
+        transform .4s ease,
+        box-shadow .4s ease;
+}
+
+.card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+        linear-gradient(
+            120deg,
+            transparent,
+            rgba(255,255,255,.25),
+            transparent
+        );
+
+    transform:
+        translateX(-100%);
+
+    transition:
+        .8s;
+}
+
+.card:hover::before{
+    transform:
+        translateX(100%);
+}
+
+.card:hover{
+
+    transform:
+        translateY(-10px)
+        rotateX(5deg);
+
+    box-shadow:
+        var(--shadow-hover);
+}
+
+.card h3{
+
+    margin-bottom:15px;
+
+    color:
+        var(--text-primary);
+}
+
+.card p{
+
+    color:
+        var(--text-secondary);
+
+    line-height:1.8;
+}
+
+/* =====================================================
+   FORMULAR
+===================================================== */
+
+.formular-section{
+
+    padding:80px 60px;
+
+    background:
+        var(--bg-soft);
+}
+
+.formular-grid{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr;
+
+    gap:35px;
 }
 
 .formular-card,
-.formular-sidebar {
-    background: white;
-    padding: 32px;
-    border-radius: 22px;
-    box-shadow: 0 20px 45px rgba(35, 54, 77, 0.08);
+.formular-sidebar{
+
+    background:
+        var(--bg-card);
+
+    padding:35px;
+
+    border-radius:28px;
+
+    border:
+        1px solid var(--border-color);
+
+    box-shadow:
+        var(--shadow-soft);
 }
 
-.formular-card h2 {
-    margin-top: 0;
-    margin-bottom: 12px;
-    color: #0f3d70;
-    font-size: 2rem;
+.formular-card h2{
+
+    margin-bottom:15px;
 }
 
-.formular-card p {
-    color: #526675;
-    line-height: 1.9;
-    margin-bottom: 28px;
+.formular-card p{
+
+    margin-bottom:25px;
+
+    color:
+        var(--text-secondary);
 }
 
-.formular-card form {
-    display: grid;
-    gap: 16px;
+fieldset{
+
+    border:
+        1px solid var(--border-color);
+
+    padding:25px;
+
+    border-radius:18px;
+
+    margin-bottom:20px;
 }
 
-.formular-card fieldset {
-    border: 1px solid #d8e6f2;
-    border-radius: 16px;
-    padding: 22px;
-    margin: 0;
-    background: #f8fbff;
+legend{
+
+    padding:0 12px;
+
+    font-weight:700;
 }
 
-.formular-card legend {
-    padding: 0 14px;
-    font-weight: 700;
-    color: #174b6f;
+label{
+
+    display:block;
+
+    margin-bottom:10px;
+    margin-top:15px;
+
+    font-weight:700;
 }
 
-.formular-card label {
-    display: block;
-    margin-bottom: 10px;
-    font-weight: 700;
-    color: #233147;
+input,
+select,
+textarea{
+
+    width:100%;
+
+    padding:15px;
+
+    border-radius:14px;
+
+    border:
+        1px solid var(--border-color);
+
+    background:
+        var(--bg-secondary);
+
+    color:
+        var(--text-primary);
+
+    transition:
+        .3s;
 }
 
-.formular-card input,
-.formular-card select,
-.formular-card textarea {
-    width: 100%;
-    padding: 14px 18px;
-    margin-bottom: 18px;
-    border: 1px solid #d4dfe8;
-    border-radius: 14px;
-    background: #fcfdff;
-    font-size: 0.98rem;
-    color: #182236;
-    box-sizing: border-box;
-    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+input:focus,
+select:focus,
+textarea:focus{
+
+    outline:none;
+
+    border-color:
+        var(--color-primary);
+
+    box-shadow:
+        0 0 0 4px rgba(66,146,198,.15);
 }
 
-.formular-card input:focus,
-.formular-card select:focus,
-.formular-card textarea:focus {
-    outline: none;
-    border-color: #2067a4;
-    box-shadow: 0 0 0 4px rgba(32, 103, 164, 0.12);
+.char-counter{
+
+    margin-top:10px;
+
+    text-align:right;
+
+    color:
+        var(--text-secondary);
 }
 
-.formular-card select {
-    appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='7'%3E%3Cpath fill='%23333' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 18px center;
-    background-size: 12px;
-    padding-right: 48px;
-    min-height: 52px;
+/* =====================================================
+   MAP
+===================================================== */
+
+.map-wrapper,
+.video-wrapper,
+.map-container{
+
+    overflow:hidden;
+
+    border-radius:20px;
+
+    margin-top:20px;
 }
 
-.formular-card textarea {
-    min-height: 160px;
-    resize: vertical;
+iframe{
+
+    width:100%;
+    height:300px;
+
+    border:none;
 }
 
-.formular-card button.btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 14px 28px;
-    background: #0056b3;
-    color: white;
-    border-radius: 999px;
-    border: none;
-    box-shadow: 0 10px 25px rgba(0, 86, 179, 0.18);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+/* =====================================================
+   DESPRE
+===================================================== */
+
+.despre-section{
+
+    padding:80px 60px;
 }
 
-.formular-card button.btn:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 14px 30px rgba(0, 86, 179, 0.22);
-}
+.despre-container{
 
-.char-counter {
-    text-align: right;
-    font-size: 0.9rem;
-    color: #556a7a;
-    margin-top: -14px;
-    margin-bottom: 18px;
-}
+    display:grid;
 
-.formular-sidebar h3 {
-    margin-top: 0;
-    color: #1f4266;
-}
+    grid-template-columns:1fr 1fr;
 
-.formular-sidebar p {
-    margin: 0 0 16px;
-    color: #4f5f6f;
-    line-height: 1.8;
-}
-
-.map-wrapper {
-    margin-top: 24px;
-    overflow: hidden;
-    border-radius: 20px;
-    border: 1px solid #d9e5ef;
-}
-
-.map-wrapper iframe {
-    width: 100%;
-    min-height: 280px;
-    border: 0;
-    display: block;
-}
-
-@media (max-width: 960px) {
-    .formular-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .formular-sidebar {
-        order: -1;
-    }
-}
-
-/* CARD HOVER EFFECT */
-.card {
-    background: #e0f2f1;
-    padding: 20px;
-    border-radius: 12px;
-
-    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
-    text-align: center;
-
-    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                box-shadow 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-12px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-}
-
-/* BUTTON */
-.btn {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 15px;
-    background: #4292c6;
-    color: white;
-    border-radius: 5px;
-    text-decoration: none;
-}
-
-/*  MISIUNE  */
-.misiune {
-    padding: 40px 50px;
-}
-
-.misiune-container {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-}
-
-.misiune-img img {
-    width: 320px;
-    border-radius: 12px;
-}
-
-.misiune-text {
-    flex: 1;
-}
-
-/* MOBILE FLIP */
-@media (max-width: 768px) {
-    .misiune-container {
-        flex-direction: column-reverse;
-        text-align: center;
-    }
-
-    .misiune-img img {
-        width: 100%;
-        max-width: 350px;
-    }
-}
-
-/*  CONTACT  */
-#contact {
-    padding: 40px 50px;
-}
-
-/*  FOOTER  */
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #0b535e;
-    color: white;
-}
-
-/* TABEL POZIȚII */
-.tabel-section {
-    padding: 50px 50px;
-    background: linear-gradient(180deg, #f5fafd 0%, #e8f4f9 100%);
-}
-
-.tabel-section h2 {
-    text-align: center;
-    color: #0f3d70;
-    font-size: 2.2rem;
-    margin-bottom: 40px;
-    margin-top: 0;
-    font-weight: 800;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-}
-
-.table-wrapper {
-    overflow-x: auto;
-    padding-bottom: 8px;
-    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05);
-    border-radius: 18px;
-    background: white;
-}
-
-.pozitii-table {
-    width: 100%;
-    min-width: 860px;
-    border-collapse: collapse;
-    background: white;
-}
-
-.pozitii-table thead {
-    background: linear-gradient(135deg, #0056b3 0%, #4292c6 100%);
-    color: white;
-}
-
-.pozitii-table thead th {
-    position: sticky;
-    top: 0;
-    z-index: 2;
-    padding: 18px 20px;
-    text-align: left;
-    font-weight: 700;
-    font-size: 0.95rem;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    color: #ffffff;
-    border-bottom: 3px solid rgba(255, 255, 255, 0.22);
-}
-
-.pozitii-table tbody tr {
-    border-bottom: 1px solid #e0e8f0;
-    transition: background-color 0.25s ease, transform 0.25s ease;
-}
-
-.pozitii-table tbody tr:hover {
-    background-color: #edf5ff;
-    box-shadow: inset 0 0 14px rgba(66, 146, 198, 0.12);
-    transform: translateY(-1px);
-}
-
-.pozitii-table tbody td {
-    padding: 16px 18px;
-    color: #233147;
-    font-size: 0.95rem;
-    line-height: 1.6;
-}
-
-.pozitii-table tbody td strong {
-    color: #1a4a82;
-    font-weight: 700;
-}
-
-.pozitii-table tbody tr:nth-child(even) {
-    background-color: #f7fbff;
-}
-
-.pozitii-table tbody tr:last-child {
-    border-bottom: none;
-}
-
-/* COLSPAN ȘI ROWSPAN STYLING */
-.pozitii-table tbody td[colspan],
-.pozitii-table tbody td[rowspan] {
-    background-color: #e8f1ff;
-    font-weight: 600;
-    color: #004494;
-    border-left: 4px solid #0056b3;
-}
-
-.pozitii-table tbody tr.highlight-row {
-    background: linear-gradient(90deg, rgba(66, 146, 198, 0.08) 0%, rgba(66, 146, 198, 0.02) 100%);
-}
-
-.pozitii-table tbody tr.highlight-row td {
-    background-color: #eff6ff;
-    font-weight: 600;
-    color: #0f3d70;
-    box-shadow: inset 0 0 8px rgba(66, 146, 198, 0.12);
-}
-
-@media (max-width: 768px) {
-    .tabel-section {
-        padding: 30px 20px;
-    }
-
-    .tabel-section h2 {
-        font-size: 1.8rem;
-        margin-bottom: 25px;
-    }
-
-    .pozitii-table thead th,
-    .pozitii-table tbody td {
-        padding: 12px 10px;
-        font-size: 0.85rem;
-    }
-
-    .pozitii-table thead th {
-        font-size: 0.8rem;
-    }
-}
-
-/* DESPRE SECTION */
-.despre-section {
-    padding: 60px 50px;
-    background: linear-gradient(180deg, #ffffff 0%, #f5fafd 100%);
-}
-
-.despre-section h2 {
-    text-align: center;
-    color: #0f3d70;
-    font-size: 2.4rem;
-    margin-bottom: 50px;
-    margin-top: 0;
-    font-weight: 800;
-    letter-spacing: -0.5px;
-}
-
-.despre-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
-    max-width: 1400px;
-    margin: 0 auto;
+    gap:35px;
 }
 
 .video-presentation,
-.location-map {
-    background: white;
-    padding: 32px;
-    border-radius: 16px;
-    box-shadow: 0 8px 24px rgba(35, 54, 77, 0.1);
-    transition: box-shadow 0.3s ease;
+.location-map{
+
+    background:
+        var(--bg-card);
+
+    padding:30px;
+
+    border-radius:24px;
+
+    border:
+        1px solid var(--border-color);
+
+    box-shadow:
+        var(--shadow-soft);
 }
 
-.video-presentation:hover,
-.location-map:hover {
-    box-shadow: 0 16px 40px rgba(35, 54, 77, 0.15);
+/* =====================================================
+   CONTACT
+===================================================== */
+
+#contact{
+
+    text-align:center;
+
+    padding:80px 20px;
 }
 
-.despre-section h3 {
-    color: #0056b3;
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer{
+
+    padding:25px;
+
+    text-align:center;
+
+    background:
+        var(--gradient-main);
+
+    color:white;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media(max-width:992px){
+
+    #hero{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .formular-grid,
+    .despre-container{
+        grid-template-columns:1fr;
+    }
+
+    .main-nav{
+
+        flex-direction:column;
+
+        gap:20px;
+    }
+}
+
+@media(max-width:768px){
+
+    .main-nav,
+    #hero,
+    #servicii,
+    .formular-section,
+    .despre-section{
+        padding:40px 20px;
+    }
+
+    .hero-content h1{
+        font-size:2.2rem;
+    }
+
+    .hero-img{
+        width:100%;
+    }
+}
+
+/* =====================================================
+   🧠 NEURAL GLASS CENTER (Sarcina 2)
+===================================================== */
+
+#hero{
+    position:relative;
+}
+
+/* container central */
+/* Modificăm poziția pentru a nu mai fi central */
+.neural-glass {
+    position: absolute;
+    /* Îl mutăm în colțul din dreapta jos al secțiunii Hero */
+    bottom: 20px; 
+    right: 60px;
+    
+    /* Eliminăm centrarea forțată de dinainte */
+    transform: none; 
+    
+    width: 180px; /* L-am făcut puțin mai mic să fie mai discret */
+    height: 180px;
+    z-index: 5; /* Un z-index mai mic să stea sub buton dacă se ating */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+}
+
+/* nucleu */
+.glass-core{
+    width:90px;
+    height:90px;
+    border-radius:50%;
+
+    background: radial-gradient(circle,
+        #6cf,
+        #1c4f8c,
+        transparent);
+
+    box-shadow:
+        0 0 30px rgba(0,200,255,0.6),
+        0 0 80px rgba(0,150,255,0.3);
+
+    animation:pulseCore 2.5s infinite ease-in-out;
+}
+
+/* inel holografic */
+.glass-ring{
+    position:absolute;
+    width:160px;
+    height:160px;
+    border-radius:50%;
+
+    border:2px solid rgba(120,220,255,0.4);
+
+    box-shadow:0 0 40px rgba(0,200,255,0.2);
+
+    animation:rotateRing 6s linear infinite;
+}
+
+/* glow exterior */
+.glass-glow{
+    position:absolute;
+    width:220px;
+    height:220px;
+
+    border-radius:50%;
+
+    background:radial-gradient(circle,
+        rgba(0,200,255,0.25),
+        transparent 70%);
+}
+
+/* text central */
+.glass-text{
+    position:absolute;
+
+    font-size:0.8rem;
+    font-weight:800;
+    letter-spacing:2px;
+
+    color:#bff;
+    text-shadow:0 0 10px rgba(0,200,255,0.8);
+}
+
+/* animații */
+@keyframes rotateRing{
+    from{transform:rotate(0deg);}
+    to{transform:rotate(360deg);}
+}
+
+@keyframes pulseCore{
+    0%,100%{transform:scale(1);}
+    50%{transform:scale(1.2);}
+}
+
+/* DARK MODE suport */
+body.dark-theme .glass-core{
+    background: radial-gradient(circle,
+        #7cf,
+        #2b7fff,
+        transparent);
+}
+
+body.dark-theme .glass-ring{
+    border-color:rgba(140,240,255,0.6);
+}```
+
+/* =====================================================
+   🚀 GPU ORCHESTRATION & STAGGERED ENTRANCE
+===================================================== */
+
+.servicii-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    perspective: 1000px; /* Context pentru transformări 3D */
+}
+
+.card {
+    position: relative;
+    padding: 35px;
+    border-radius: 24px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-soft);
+    overflow: hidden;
+
+    /* 🏎️ PERFORMANCE: Rulează pe layer GPU separat */
+    will-change: transform, opacity;
+
+    /* STARE INIȚIALĂ (pentru animație) */
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+
+    /* ANIMAȚIE CHAINED */
+    animation: staggeredFadeIn 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+    
+    /* Orchestram intrarea folosind variabila --i din HTML */
+    animation-delay: calc(var(--i) * 0.15s);
+}
+
+@keyframes staggeredFadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* 🟢 INDICATOARE STATUS (UI/UX) */
+.status-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    display: inline-block;
+    position: relative;
+}
+
+.status-indicator.online {
+    background: #00ff88;
+    box-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+}
+
+.status-indicator.warning {
+    background: #ffbb00;
+    box-shadow: 0 0 10px rgba(255, 187, 0, 0.5);
+}
+
+/* Efect de pulse pentru indicatorul online */
+.status-indicator.online::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: inherit;
+    animation: statusPulse 2s infinite;
+}
+
+@keyframes statusPulse {
+    0% { transform: scale(1); opacity: 0.8; }
+    100% { transform: scale(2.5); opacity: 0; }
+}
+
+/* Păstrăm restul stilurilor tale de hover pe card */
+.card:hover {
+    transform: translateY(-10px) rotateX(5deg) !important; /* !important pentru a suprascrie starea finală a animației */
+    box-shadow: var(--shadow-hover);
+}
+
+/* =====================================================
+   🔐 SECURITY SECTION - BEM & CSS STATE MACHINE
+===================================================== */
+
+.security {
+    display: flex;
+    justify-content: center;
+    padding: 60px 20px;
+}
+
+/* Blocul Principal */
+.security-form {
+    background: rgba(15, 25, 40, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+    max-width: 400px;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* State Machine: Dacă formularul este valid, schimbă glow-ul în verde */
+.security-form:has(:valid) {
+    border-color: rgba(0, 255, 136, 0.3);
+    box-shadow: 0 0 30px rgba(0, 255, 136, 0.1);
+}
+
+/* Dacă toate câmpurile sunt valide (Full Access) */
+.security-form:valid {
+    border-color: #00ff88;
+    box-shadow: 0 0 50px rgba(0, 255, 136, 0.2);
+}
+
+/* Elemente BEM */
+.security-form__title {
+    color: #fff;
     font-size: 1.5rem;
-    margin-top: 0;
-    margin-bottom: 20px;
-    font-weight: 700;
+    margin-bottom: 30px;
+    text-align: center;
+    letter-spacing: 2px;
 }
 
-.video-wrapper {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    background: #f0f0f0;
-    border-radius: 12px;
-    overflow: hidden;
-    margin-bottom: 16px;
+.security-form__field {
+    position: relative;
+    margin-bottom: 25px;
 }
 
-.video-wrapper iframe {
+.security-form__input {
     width: 100%;
-    height: 100%;
+    padding: 12px 0;
+    background: transparent;
     border: none;
-    display: block;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.3s;
 }
 
-.video-description {
-    color: #526675;
-    font-size: 0.95rem;
-    line-height: 1.8;
-    margin: 0;
+.security-form__label {
+    position: absolute;
+    left: 0;
+    top: 12px;
+    color: rgba(255, 255, 255, 0.5);
+    pointer-events: none;
+    transition: 0.3s;
 }
 
-.map-container {
+/* Floating Label Logic */
+.security-form__input:focus ~ .security-form__label,
+.security-form__input:not(:placeholder-shown) ~ .security-form__label {
+    top: -15px;
+    font-size: 0.8rem;
+    color: #00d4ff;
+}
+
+/* Input States (Visual Validation) */
+.security-form__input:not(:placeholder-shown):valid {
+    border-bottom-color: #00ff88;
+}
+
+.security-form__input:not(:placeholder-shown):invalid {
+    border-bottom-color: #ff4d4d;
+}
+
+/* Butonul - Dezactivat nativ prin CSS dacă form-ul e invalid */
+.security-form__button {
     width: 100%;
-    aspect-ratio: 16 / 9;
-    background: #f0f0f0;
-    border-radius: 12px;
-    overflow: hidden;
-    margin-bottom: 20px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    cursor: not-allowed;
+    font-weight: bold;
+    transition: all 0.4s;
 }
 
-.map-container iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-    display: block;
+/* Modificator prin State Machine: Activare buton */
+.security-form:valid .security-form__button {
+    background: linear-gradient(90deg, #00d4ff, #00ff88);
+    color: #050a10;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.4);
+    transform: translateY(-2px);
 }
 
-.map-info {
-    background: #f8fbff;
-    padding: 18px;
-    border-left: 4px solid #0056b3;
-    border-radius: 8px;
-}
-
-.map-info p {
-    margin: 10px 0;
-    color: #233147;
-    font-size: 0.95rem;
-    line-height: 1.6;
-}
-
-.map-info p:first-child {
-    margin-top: 0;
-}
-
-.map-info p:last-child {
-    margin-bottom: 0;
-}
-
-.map-info strong {
-    color: #0056b3;
-    font-weight: 700;
-}
-
-@media (max-width: 1024px) {
-    .despre-container {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-}
-
-@media (max-width: 768px) {
-    .despre-section {
-        padding: 40px 20px;
-    }
-
-    .despre-section h2 {
-        font-size: 1.8rem;
-        margin-bottom: 35px;
-    }
-
-    .video-presentation,
-    .location-map {
-        padding: 20px;
-        border-radius: 12px;
-    }
-
-    .despre-section h3 {
-        font-size: 1.2rem;
-        margin-bottom: 16px;
-    }
-
-    .video-wrapper,
-    .map-container {
-        aspect-ratio: 16 / 9;
-        margin-bottom: 12px;
-    }
-
-    .map-info {
-        padding: 14px;
-        font-size: 0.9rem;
-    }
+.security-form:valid .security-form__button:hover {
+    filter: brightness(1.2);
+    box-shadow: 0 0 30px rgba(0, 255, 136, 0.6);
 }

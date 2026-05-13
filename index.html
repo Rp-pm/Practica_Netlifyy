@@ -1,20 +1,29 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AgencyRecruit</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AgencyRecruit — Theming Engine</title>
+
+    <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
 <body>
 
+<!-- THEME TOGGLE -->
+<button id="themeToggle" class="theme-toggle">
+    🌙
+</button>
+
+
+
 <header>
     <nav class="main-nav">
 
-        <!-- LOGO COMPLET -->
+        <!-- LOGO -->
         <div class="logo-box">
             <a href="#hero" class="logo">
+
                 <div class="logo-icon">
                     <span class="person"></span>
                 </div>
@@ -23,14 +32,15 @@
                     <span class="brand-name">RECRUTARE</span>
                     <span class="tagline">Agenție de Plasare</span>
                 </div>
+
             </a>
         </div>
 
-        <!-- NAV MENU -->
+        <!-- NAVIGATION -->
         <ul>
             <li><a href="#hero">Acasă</a></li>
             <li><a href="#servicii">Servicii</a></li>
-            <li><a href="#misiune">Misiune</a></li>
+            <li><a href="#formular">Formular</a></li>
             <li><a href="#despre">Despre</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
@@ -42,284 +52,308 @@
 
 <!-- HERO -->
 <section id="hero">
-    <img src="assets/img/recruitare.png" class="hero-img" alt="Echipa AgencyRecruit">
+
+    <img src="assets/img/recruitare.png"
+         alt="Recruit Team"
+         class="hero-img">
 
     <div class="hero-content">
         <h1>Găsește jobul potrivit</h1>
-        <p>Recrutare modernă și rapidă</p>
-        <a href="assets/docs/test_formular.html" class="btn hero-btn">Completează Formularul</a>
+
+        <p>
+            Platformă modernă de recrutare cu sistem inteligent
+            de matching și experiență UI avansată.
+        </p>
+
+        <a href="assets/docs/test_formular.html" class="btn hero-btn">
+            Completează Formularul
+        </a>
+    </div>
+
+</section>
+
+<!-- 🧠 NEURAL CORE (între secțiuni) -->
+<div class="neural-glass" id="neuralGlass">
+    <div class="glass-core"></div>
+    <div class="glass-ring"></div>
+    <div class="glass-glow"></div>
+    <div class="glass-text">NEURAL CORE</div>
+</div>
+
+<!-- SECTION: SECURITY ACCESS -->
+<section class="security">
+    <div class="security__container">
+        <form class="security-form" id="accessForm">
+            <h2 class="security-form__title">Access Validation</h2>
+            
+            <div class="security-form__field">
+                <input 
+                    type="email" 
+                    id="email" 
+                    class="security-form__input" 
+                    placeholder=" " 
+                    required
+                />
+                <label for="email" class="security-form__label">Neural ID (Email)</label>
+                <div class="security-form__status-line"></div>
+            </div>
+
+            <div class="security-form__field">
+                <input 
+                    type="password" 
+                    id="pass" 
+                    class="security-form__input" 
+                    placeholder=" " 
+                    required 
+                    minlength="6"
+                />
+                <label for="pass" class="security-form__label">Access Key</label>
+                <div class="security-form__status-line"></div>
+            </div>
+
+            <button type="submit" class="security-form__button">
+                Initialize Link
+            </button>
+        </form>
     </div>
 </section>
 
-<!-- SERVICII GRID -->
+<!-- SERVICII -->
 <section id="servicii">
-    <h2>Serviciile Noastre</h2>
+    <h2>Status Servicii GPU Orchestration</h2>
+
     <div class="servicii-grid">
-        <article class="card">
+
+        <!-- Card 1 (i=0) -->
+        <article class="card" style="--i: 0">
+            <div class="status-indicator online"></div>
             <h3>Recrutare</h3>
-            <p>Selectăm candidați potriviți.</p>
+            <p>Selectăm candidații ideali pentru compania ta.</p>
             <a href="#" class="btn">Detalii</a>
         </article>
 
-        <article class="card">
+        <!-- Card 2 (i=1) -->
+        <article class="card" style="--i: 1">
+            <div class="status-indicator online"></div>
             <h3>Carieră</h3>
-            <p>Orientare profesională.</p>
+            <p>Consultanță profesională și dezvoltare personală.</p>
             <a href="#" class="btn">Start</a>
         </article>
 
-        <article class="card">
-            <h3>HR</h3>
-            <p>Management resurse umane.</p>
-            <a href="#" class="btn">Info</a>
+        <!-- Card 3 (i=2) -->
+        <article class="card" style="--i: 2">
+            <div class="status-indicator online"></div>
+            <h3>AI Matching</h3>
+            <p>Potrivire automată job-candidat prin algoritmi AI.</p>
+            <a href="#" class="btn">Explorează</a>
         </article>
 
-        <article class="card">
+        <!-- Card 4 (i=3) -->
+        <article class="card" style="--i: 3">
+            <div class="status-indicator warning"></div>
             <h3>Training</h3>
-            <p>Cursuri profesionale.</p>
+            <p>Cursuri și workshop-uri pentru angajare rapidă.</p>
             <a href="#" class="btn">Cursuri</a>
         </article>
 
-        <article class="card">
+        <!-- Card 5 (i=4) -->
+        <article class="card" style="--i: 4">
+            <div class="status-indicator online"></div>
+            <h3>HR Management</h3>
+            <p>Administrare și optimizare procese HR.</p>
+            <a href="#" class="btn">Info</a>
+        </article>
+
+        <!-- Card 6 (i=5) -->
+        <article class="card" style="--i: 5">
+            <div class="status-indicator online"></div>
             <h3>CV Review</h3>
-            <p>Optimizare CV.</p>
+            <p>Optimizare CV pentru interviuri și companii.</p>
             <a href="#" class="btn">Verifică</a>
         </article>
 
-        <article class="card">
-            <h3>AI Matching</h3>
-            <p>Potrivire automată job-candidat.</p>
-            <a href="#" class="btn">Explorează</a>
-        </article>
     </div>
 </section>
 
-<!-- TABEL POZIȚII DISPONIBILE -->
-<section id="tabel-pozitii" class="tabel-section">
-    <h2>Poziții Disponibile</h2>
-    <div class="table-wrapper">
-        <table class="pozitii-table">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Funcție</th>
-                    <th>Departament</th>
-                    <th>Locație</th>
-                    <th>Salariu (MDL)</th>
-                    <th>Tip Contract</th>
-                </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td>001</td>
-                <td colspan="2"><strong>Developer Senior</strong> - Frontend & Backend</td>
-                <td>Chișinău</td>
-                <td>10000 - 14000</td>
-                <td>Full-time</td>
-            </tr>
-            <tr>
-                <td>002</td>
-                <td>Project Manager</td>
-                <td>Management</td>
-                <td>Chișinău</td>
-                <td>9000 - 11000</td>
-                <td>Full-time</td>
-            </tr>
-            <tr>
-                <td rowspan="2">003</td>
-                <td>Designer UI/UX</td>
-                <td>Design</td>
-                <td>Chișinău</td>
-                <td>7000 - 9000</td>
-                <td>Full-time</td>
-            </tr>
-            <tr>
-                <td>Designer Grafic</td>
-                <td>Design</td>
-                <td>Bălți</td>
-                <td>5000 - 7000</td>
-                <td>Part-time</td>
-            </tr>
-            <tr>
-                <td>004</td>
-                <td>Business Analyst</td>
-                <td>Analiză</td>
-                <td>Orhei</td>
-                <td>8000 - 10000</td>
-                <td>Full-time</td>
-            </tr>
-            <tr class="highlight-row">
-                <td>005</td>
-                <td>HR Manager</td>
-                <td>Resurse Umane</td>
-                <td>Chișinău</td>
-                <td>7600 - 9600</td>
-                <td>Full-time</td>
-            </tr>
-        </tbody>
-        </table>
-    </div>
-</section>
-
-<!-- FORMULAR CONTACT -->
+<!-- FORMULAR -->
 <section id="formular" class="formular-section">
+
     <div class="formular-grid">
+
+        <!-- FORM -->
         <div class="formular-card">
+
             <h2>Trimite-ne un mesaj</h2>
-            <p>Completează datele personale și spune-ne ce serviciu te interesează.</p>
+
+            <p>
+                Completează formularul pentru a fi contactat
+                de echipa noastră de recrutare.
+            </p>
+
             <form id="contactForm">
+
                 <fieldset>
+
                     <legend>Date personale</legend>
 
                     <label for="fullname">Nume complet</label>
-                    <input type="text" id="fullname" name="fullname" autocomplete="name" required placeholder="Ion Popescu">
+
+                    <input
+                        type="text"
+                        id="fullname"
+                        placeholder="Ion Popescu"
+                        required
+                    />
 
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="email" autocomplete="email" required placeholder="ion@exemplu.md">
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="ion@email.md"
+                        required
+                    />
 
                     <label for="phone">Telefon</label>
-                    <input type="tel" id="phone" name="phone" autocomplete="tel" required placeholder="+373 600 000 00">
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        placeholder="+373 600 000 00"
+                        required
+                    />
+
                 </fieldset>
 
                 <fieldset>
-                    <legend>Mesaj și subiect</legend>
 
-                    <label for="service">Serviciu de interes</label>
-                    <select id="service" name="service" required>
-                        <option value="">Alege un serviciu</option>
-                        <option value="recrutare">Recrutare</option>
-                        <option value="cariera">Carieră</option>
-                        <option value="hr">HR</option>
-                        <option value="training">Training</option>
-                        <option value="cv">CV Review</option>
-                        <option value="matching">AI Matching</option>
+                    <legend>Mesaj</legend>
+
+                    <label for="service">
+                        Serviciu
+                    </label>
+
+                    <select id="service" required>
+                        <option value="">
+                            Alege un serviciu
+                        </option>
+
+                        <option>Recrutare</option>
+                        <option>AI Matching</option>
+                        <option>Training</option>
+                        <option>HR</option>
                     </select>
 
-                    <label for="message">Mesaj</label>
-                    <textarea id="message" name="message" rows="6" maxlength="250" autocomplete="on" required placeholder="Scrie-ne ce ai nevoie..."></textarea>
-                    <div class="char-counter"><span id="remainingChars">250</span> caractere rămase</div>
+                    <label for="message">
+                        Mesaj
+                    </label>
+
+                    <textarea
+                        id="message"
+                        rows="6"
+                        maxlength="250"
+                        placeholder="Scrie mesajul tău..."
+                        required>
+                    </textarea>
+
+                    <div class="char-counter">
+                        <span id="remainingChars">250</span>
+                        caractere rămase
+                    </div>
+
                 </fieldset>
 
-                <button class="btn" type="submit">Trimite mesaj</button>
+                <button class="btn submit-btn" type="submit">
+                    Trimite Mesaj
+                </button>
+
             </form>
+
         </div>
 
+        <!-- SIDEBAR -->
         <aside class="formular-sidebar">
-            <h3>Detalii de contact</h3>
+
+            <h3>Date de Contact</h3>
+
             <p>Chișinău, Moldova</p>
-            <p>Tel: +373 000 000 00</p>
-            <p>Email: contact@recrutare.md</p>
-            <p>Program: L-V 9:00 - 18:00</p>
+            <p>+373 000 000 00</p>
+            <p>contact@recrutare.md</p>
 
             <div class="map-wrapper">
+
                 <iframe
                     src="https://www.google.com/maps?q=Chisinau,+Moldova&output=embed"
-                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    loading="lazy">
                 </iframe>
+
             </div>
+
         </aside>
-    </div>
-</section>
-
-<!-- MISIUNE -->
-<section id="misiune" class="misiune">
-
-    <div class="misiune-container">
-
-        <div class="misiune-img">
-            <img src="assets/img/recruit1.jpg" alt="Misiune">
-        </div>
-
-        <div class="misiune-text">
-            <h2>Misiunea Noastră</h2>
-            <p>
-                Conectăm oamenii cu oportunitățile potrivite și ajutăm companiile
-                să găsească talentele ideale prin soluții moderne de recrutare.
-            </p>
-        </div>
 
     </div>
 
 </section>
 
-<!-- DESPRE US -->
+<!-- DESPRE -->
 <section id="despre" class="despre-section">
+
     <h2>Despre Noi</h2>
-    
+
     <div class="despre-container">
-        <!-- VIDEO PRESENTATION -->
+
         <div class="video-presentation">
-            <h3>Ghidul Nostru de Recrutare</h3>
+
+            <h3>Video Prezentare</h3>
+
             <div class="video-wrapper">
-                <iframe 
-                    width="100%" 
-                    height="450" 
-                    src="https://www.youtube.com/embed/8gKj0WQvQ6U" 
-                    title="YouTube video player" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+
+                <iframe
+                    src="https://www.youtube.com/embed/8gKj0WQvQ6U"
                     allowfullscreen>
                 </iframe>
+
             </div>
-            <p class="video-description">Aflați cum suntem specializați în a conecta talentele cu oportunități potrivite pe piața din Moldova.</p>
+
         </div>
 
-        <!-- LOCATION MAP -->
         <div class="location-map">
+
             <h3>Locația Noastră</h3>
+
             <div class="map-container">
-                <iframe 
-                    width="100%" 
-                    height="450" 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2887.886282076647!2d28.356603!3d47.16087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c97c2b0b0b0b0b%3A0x0b0b0b0b0b0b0b0b!2sChishinau%2C%20Moldova!5e0!3m2!1sen!2smd!4v1234567890" 
-                    style="border:0;" 
-                    allowfullscreen="" 
-                    loading="lazy" 
-                    referrerpolicy="no-referrer-when-downgrade">
+
+                <iframe
+                    src="https://www.google.com/maps?q=Chisinau,+Moldova&output=embed"
+                    loading="lazy">
                 </iframe>
+
             </div>
-            <div class="map-info">
-                <p><strong>Adresa:</strong> Chișinău, Moldova</p>
-                <p><strong>Tel:</strong> +373 xx xxx xxx</p>
-                <p><strong>Email:</strong> contact@recrutare.md</p>
-                <p><strong>Program:</strong> Luni - Vineri, 9:00 - 18:00</p>
-            </div>
+
         </div>
+
     </div>
+
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
+
     <h2>Contact Rapid</h2>
+
     <p>Chișinău, Moldova</p>
-    <p>+373 xx xxx xxx</p>
     <p>contact@recrutare.md</p>
+    <p>+373 000 000 00</p>
+
 </section>
 
 </main>
 
-<script>
-    const messageTextarea = document.getElementById('message');
-    const remainingChars = document.getElementById('remainingChars');
-    if (messageTextarea && remainingChars) {
-        const updateCount = () => {
-            remainingChars.textContent = 250 - messageTextarea.value.length;
-        };
-        messageTextarea.addEventListener('input', updateCount);
-        updateCount();
-    }
-
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(event) {
-            event.preventDefault();
-            alert('Mesaj trimis! Vom reveni în curând.');
-        });
-    }
-</script>
-
 <footer>
     <p>© 2026 AgencyRecruit</p>
 </footer>
+
+<script src="assets/js/script.js"></script>
 
 </body>
 </html>

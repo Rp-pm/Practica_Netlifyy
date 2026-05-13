@@ -1,0 +1,91 @@
+:root {
+  --mx: 0.5;
+  --my: 0.5;
+
+  --bg: #0a0e27;
+  --glass: rgba(255,255,255,0.05);
+  --border: rgba(255,255,255,0.12);
+}
+
+/* GLOBAL */
+body {
+  margin: 0;
+  font-family: system-ui;
+  background: var(--bg);
+  color: white;
+}
+
+/* GRID */
+.ui-orchestrator {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding: 3rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* CARD */
+.feature-wrapper {
+  transform-style: preserve-3d;
+}
+
+.feature-card {
+  position: relative;
+  padding: 1.8rem;
+  border-radius: 16px;
+
+  background: var(--glass);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(18px);
+
+  transform-style: preserve-3d;
+
+  transition: transform 0.2s ease;
+}
+
+/* REFRACTION */
+.feature-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: radial-gradient(
+    circle at calc(var(--mx)*100%) calc(var(--my)*100%),
+    rgba(255,255,255,0.18),
+    transparent 60%
+  );
+
+  mix-blend-mode: screen;
+}
+
+.feature-card {
+  /* shadow dinamic bazat pe rotație */
+  box-shadow:
+    calc(var(--ry) * 2px) calc(var(--rx) * 2px) 30px rgba(0,0,0,0.4);
+}
+
+/* AO */
+.feature-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: radial-gradient(
+    circle,
+    transparent 40%,
+    rgba(0,0,0,0.4)
+  );
+}
+
+/* CHROMATIC ABERRATION */
+h3 {
+  text-shadow:
+    calc((var(--mx) - 0.5) * 3px) 0 red,
+    calc((var(--mx) - 0.5) * -3px) 0 blue;
+}
+
+/* ICON */
+.card-icon {
+  font-size: 2rem;
+}

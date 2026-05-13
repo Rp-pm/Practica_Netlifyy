@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quantum UI - Neural Glass Interface</title>
+
+  <link rel="stylesheet" href="features.css" />
+</head>
+<body>
+
+<section class="ui-orchestrator">
+
+  <div class="feature-wrapper" style="--i: 3;">
+    <div class="feature-card depth">
+      <div class="card-icon">🚀</div>
+      <div class="card-content">
+        <h3>Arhitectură GPU</h3>
+        <p>Sincronizare la nivel de pixel.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="feature-wrapper" style="--i: 2;">
+    <div class="feature-card depth">
+      <div class="card-icon">⚡</div>
+      <div class="card-content">
+        <h3>Render Paralel</h3>
+        <p>Execuție simultană pentru latență minimă.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="feature-wrapper" style="--i: 1;">
+    <div class="feature-card depth">
+      <div class="card-icon">🧠</div>
+      <div class="card-content">
+        <h3>Logică Neurală</h3>
+        <p>Optimizare bazată pe flux predictiv.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="feature-wrapper" style="--i: 1;">
+    <div class="feature-card depth">
+      <div class="card-icon">🌌</div>
+      <div class="card-content">
+        <h3>Pipeline Dinamic</h3>
+        <p>Randare fluidă cu sincronizare adaptivă.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="feature-wrapper" style="--i: 2;">
+    <div class="feature-card depth">
+      <div class="card-icon">🔒</div>
+      <div class="card-content">
+        <h3>Kernel Secure</h3>
+        <p>Izolare hardware și criptare avansată.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="feature-wrapper" style="--i: 3;">
+    <div class="feature-card depth">
+      <div class="card-icon">📡</div>
+      <div class="card-content">
+        <h3>Rețea Quantum</h3>
+        <p>Transfer asincron și latență ultra-low.</p>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<script>
+document.addEventListener("mousemove", (e) => {
+  const x = e.clientX / window.innerWidth;
+  const y = e.clientY / window.innerHeight;
+
+  document.documentElement.style.setProperty("--mx", x);
+  document.documentElement.style.setProperty("--my", y);
+});
+</script>
+
+<script src="script.js"></script>
+
+</body>
+</html>

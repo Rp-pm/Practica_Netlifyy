@@ -1,0 +1,98 @@
+/* ================= FLOATING LABEL ================= */
+
+.form__input:focus + .form__label,
+.form__input:not(:placeholder-shown) + .form__label {
+  transform: translateY(-18px);
+  font-size: 12px;
+  color: var(--blue);
+}
+
+.form__label {
+  position: absolute;
+  left: 12px;
+  top: 14px;
+
+  color: var(--muted);
+  font-size: 14px;
+
+  transition: 0.25s ease;
+  pointer-events: none;
+}
+
+/* ================= VALID (GREEN) ================= */
+
+.form__input:valid:not(:placeholder-shown) {
+  border-color: var(--green);
+  box-shadow: 0 0 0 2px rgba(46, 204, 113, 0.15);
+}
+
+/* focus + valid */
+.form__input:focus:valid {
+  border-color: var(--green);
+  box-shadow: 0 0 0 2px rgba(46, 204, 113, 0.25);
+}
+
+/* ================= INVALID (RED) ================= */
+
+.form__input:invalid:not(:placeholder-shown):not(:focus) {
+  border-color: var(--red);
+  box-shadow: 0 0 0 2px rgba(231, 76, 60, 0.15);
+}
+
+.form__input:focus:invalid {
+  border-color: var(--red);
+  box-shadow: 0 0 0 2px rgba(231, 76, 60, 0.25);
+}
+
+/* ================= EMPTY STATE ================= */
+
+.form__services {
+  padding: 12px;
+  border: 1px dashed var(--stroke);
+  border-radius: var(--radius);
+  color: var(--muted);
+
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form__services:not(:empty) .form__empty {
+  display: none;
+}
+
+/* ================= BUTTON ================= */
+
+.form__submit-btn {
+  padding: 13px;
+  border: none;
+  border-radius: var(--radius);
+
+  background: #2a2a2a;
+  color: rgba(255,255,255,0.5);
+
+  font-weight: 600;
+
+  opacity: 0.6;
+  pointer-events: none;
+
+  transition: 0.25s ease;
+}
+
+/* active when checkbox checked */
+.form__terms:has(.form__checkbox:checked)
+~ .form__submit-btn {
+  background: linear-gradient(135deg, var(--green), #1f9d57);
+  color: white;
+
+  opacity: 1;
+  pointer-events: auto;
+
+  box-shadow: 0 8px 20px rgba(46, 204, 113, 0.25);
+}
+
+.form__terms:has(.form__checkbox:checked)
+~ .form__submit-btn:hover {
+  transform: translateY(-1px);
+}

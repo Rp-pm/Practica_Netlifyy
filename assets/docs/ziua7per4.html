@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <title>RC 251 Expert Form</title>
+
+  <link rel="stylesheet" href="_variables.css">
+  <link rel="stylesheet" href="_atoms.css">
+  <link rel="stylesheet" href="_molecules.css">
+</head>
+
+<body class="page">
+
+<form class="form">
+
+  <!-- EMPTY STATE -->
+  <div class="form__services">
+    <p class="form__empty">Niciun serviciu selectat</p>
+  </div>
+
+  <!-- INPUT NAME -->
+  <div class="form__field">
+    <input class="form__input" type="text" placeholder=" " required minlength="3">
+    <label class="form__label">Nume</label>
+  </div>
+
+  <!-- INPUT EMAIL -->
+  <div class="form__field">
+    <input class="form__input" type="email" placeholder=" " required>
+    <label class="form__label">Email</label>
+  </div>
+
+  <!-- INPUT PASSWORD -->
+  <div class="form__field">
+    <input class="form__input" type="password" placeholder=" " required minlength="6">
+    <label class="form__label">Parolă</label>
+  </div>
+
+  <!-- TERMS -->
+  <div class="form__terms">
+    <input type="checkbox" id="terms" class="form__checkbox">
+    <label for="terms" class="form__terms-label">
+      Accept Termeni și Condiții
+    </label>
+  </div>
+
+  <button class="form__submit-btn">Trimite</button>
+
+</form>
+
+</body>
+</html>

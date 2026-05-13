@@ -1,0 +1,16 @@
+:root {
+  --bg: #0f0f0f;
+  --panel: #161616;
+  --text: #ffffff;
+  --muted: #aaaaaa;
+
+  --blue: #4da3ff;
+  --green: #2ecc71;
+  --red: #e74c3c;
+
+  --border: #444;
+  --stroke: rgba(255, 255, 255, 0.12);
+
+  --radius: 8px;
+  --blur: 12px;
+}

@@ -1,0 +1,248 @@
+:root {
+  --mx: 0.5;
+  --my: 0.5;
+}
+
+/* ================= BACKGROUND ================= */
+body {
+  margin: 0;
+  font-family: system-ui;
+  background: #070b22;
+  color: white;
+}
+
+/* hologram (simplificat background glow) */
+.hologram {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+}
+
+.core-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 40%, #00f2ff22, transparent 60%);
+  filter: blur(40px);
+}
+
+/* ================= GRID ================= */
+.ui-grid {
+  position: relative;
+  z-index: 10;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+
+  max-width: 1000px;
+  margin: auto;
+  padding: 4rem;
+}
+
+/* ================= CARD ================= */
+.card {
+  position: relative;
+  padding: 1.5rem;
+  border-radius: 16px;
+
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.12);
+
+  backdrop-filter: blur(18px);
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* glow interior ca în imagine */
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+
+  background: radial-gradient(
+    circle at 50% 40%,
+    rgba(255,255,255,0.12),
+    transparent 70%
+  );
+  opacity: 0.8;
+}
+
+/* hover 3D */
+.card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+}
+
+/* ICON */
+.icon {
+  font-size: 1.8rem;
+  margin-bottom: 0.8rem;
+}
+
+/* TITLE */
+h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.hologram {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+/* ================= CORE GLOW ================= */
+.core-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center,
+    rgba(0,255,255,0.15),
+    transparent 60%);
+  filter: blur(40px);
+}
+
+/* ================= NEURAL CORE ================= */
+.neural-core {
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  transform: translate(-50%, -50%);
+}
+
+/* center node */
+.core {
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(circle, #00f2ff, #0066ff);
+  border-radius: 50%;
+  box-shadow: 0 0 40px #00f2ff;
+  position: relative;
+  z-index: 2;
+}
+
+/* pulse waves */
+.pulse {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border: 2px solid rgba(0,255,255,0.4);
+  border-radius: 50%;
+  top: -20px;
+  left: -20px;
+  animation: pulse 2.5s infinite ease-out;
+}
+
+.pulse.delay {
+  animation-delay: 1.2s;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.6);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
+
+/* ================= ORBIT RINGS ================= */
+.ring {
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 1px solid rgba(0,255,255,0.15);
+}
+
+.ring1 {
+  width: 200px;
+  height: 200px;
+  animation: rotate 8s linear infinite;
+}
+
+.ring2 {
+  width: 300px;
+  height: 300px;
+  animation: rotate 12s linear infinite reverse;
+}
+
+.ring3 {
+  width: 420px;
+  height: 420px;
+  animation: rotate 18s linear infinite;
+  opacity: 0.5;
+}
+
+@keyframes rotate {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* DESCRIPTION */
+p {
+  margin-top: 0.4rem;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .ui-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .ui-grid {
+    grid-template-columns: 1fr;
+  }
+}
+:root {
+  --rx: 0;
+  --ry: 0;
+  --glitch-offset: 0;
+  --mx: 0.5;
+  --my: 0.5;
+}
+
+/* ================= RAY-TRACED SHADOW ================= */
+.card {
+  position: relative;
+  transform-style: preserve-3d;
+
+  box-shadow:
+    calc(var(--rx) * 30px)
+    calc(var(--ry) * 30px)
+    50px rgba(0,0,0,0.45);
+}
+
+/* ================= SPECULAR LIGHT ================= */
+.specular-highlight {
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  pointer-events: none;
+
+  background: radial-gradient(
+    circle at calc((1 - var(--mx)) * 100%)
+               calc((1 - var(--my)) * 100%),
+    rgba(255,255,255,0.25),
+    transparent 60%
+  );
+
+  mix-blend-mode: screen;
+  opacity: 0.8;
+}
+
+/* ================= OPTICAL GLITCH ================= */
+.card h3,
+.card p {
+  text-shadow:
+    calc(var(--glitch-offset) * 1px) 0 rgba(0,255,255,0.6),
+    calc(var(--glitch-offset) * -1px) 0 rgba(255,0,255,0.5);
+}
